@@ -33,54 +33,58 @@
 
 template <int NROOTS> __device__
 void GINTg0_2e_2d4d(double* __restrict__ g, double*__restrict__ uw, double norm,
-                    int ish, int jsh, int ksh, int lsh, int prim_ij, int prim_kl)
+                    double eij, double ekl,
+                    double ai, double aj, double ak, double al,
+                    BasisCoords bc_i, BasisCoords bc_j,
+                    BasisCoords bc_k, BasisCoords bc_l)
 {
-    double* __restrict__ a12 = c_bpcache.a12;
-    double* __restrict__ e12 = c_bpcache.e12;
-    double* __restrict__ x12 = c_bpcache.x12;
-    double* __restrict__ y12 = c_bpcache.y12;
-    double* __restrict__ z12 = c_bpcache.z12;
-    double aij = a12[prim_ij];
-    double akl = a12[prim_kl];
-    double eij = e12[prim_ij];
-    double ekl = e12[prim_kl];
+    double xi = bc_i.x;
+    double yi = bc_i.y;
+    double zi = bc_i.z;
+    double xj = bc_j.x;
+    double yj = bc_j.y;
+    double zj = bc_j.z;
+    double xk = bc_k.x;
+    double yk = bc_k.y;
+    double zk = bc_k.z;
+    double xl = bc_l.x;
+    double yl = bc_l.y;
+    double zl = bc_l.z;
+    double xixj = xi - xj;
+    double yiyj = yi - yj;
+    double zizj = zi - zj;
+    double xkxl = xk - xl;
+    double ykyl = yk - yl;
+    double zkzl = zk - zl;
+    double aij = ai + aj;
+    double aj_aij = aj / aij;
+    double xij = xi - xixj * aj_aij;
+    double yij = yi - yiyj * aj_aij;
+    double zij = zi - zizj * aj_aij;
+    double akl = ak + al;
+    double al_akl = al / akl;
+    double xkl = xk - xkxl * al_akl;
+    double ykl = yk - ykyl * al_akl;
+    double zkl = zk - zkzl * al_akl;
     double aijkl = aij + akl;
     double a1 = aij * akl;
     double a0 = a1 / aijkl;
     double fac = eij * ekl / (sqrt(aijkl) * a1);
-
-    double* __restrict__ u = uw;
-    double* __restrict__ w = u + NROOTS;
-    double* __restrict__ gx = g;
-    double* __restrict__ gy = g + c_envs.g_size;
-    double* __restrict__ gz = g + c_envs.g_size * 2;
-
-    double xij = x12[prim_ij];
-    double yij = y12[prim_ij];
-    double zij = z12[prim_ij];
-    double xkl = x12[prim_kl];
-    double ykl = y12[prim_kl];
-    double zkl = z12[prim_kl];
     double xijxkl = xij - xkl;
     double yijykl = yij - ykl;
     double zijzkl = zij - zkl;
-    int nbas = c_bpcache.nbas;
-    double* __restrict__ bas_x = c_bpcache.bas_coords;
-    double* __restrict__ bas_y = bas_x + nbas;
-    double* __restrict__ bas_z = bas_y + nbas;
-    double xixj, yiyj, zizj, xkxl, ykyl, zkzl;
-    double xi = bas_x[ish];
-    double yi = bas_y[ish];
-    double zi = bas_z[ish];
-    double xk = bas_x[ksh];
-    double yk = bas_y[ksh];
-    double zk = bas_z[ksh];
     double xijxi = xij - xi;
     double yijyi = yij - yi;
     double zijzi = zij - zi;
     double xklxk = xkl - xk;
     double yklyk = ykl - yk;
     double zklzk = zkl - zk;
+
+    double* __restrict__ u = uw;
+    double* __restrict__ w = u + NROOTS;
+    double* __restrict__ gx = g;
+    double* __restrict__ gy = g + c_envs.g_size;
+    double* __restrict__ gz = g + c_envs.g_size * 2;
 
     int nmax = c_envs.i_l + c_envs.j_l;
     int mmax = c_envs.k_l + c_envs.l_l;
@@ -272,9 +276,6 @@ void GINTg0_2e_2d4d(double* __restrict__ g, double*__restrict__ uw, double norm,
 
     if (ijmin > 0) {
         // g(i,j) = rirj * g(i,j-1) +  g(i+1,j-1)
-        xixj = xi - bas_x[jsh];
-        yiyj = yi - bas_y[jsh];
-        zizj = zi - bas_z[jsh];
         //for (k = 0; k <= mmax; ++k) {
         //for (j = 0; j < ijmin; ++j) {
         //for (i = nmax-1-j; i >= 0; i--) {
@@ -351,9 +352,6 @@ void GINTg0_2e_2d4d(double* __restrict__ g, double*__restrict__ uw, double norm,
 
     if (klmin > 0) {
         // g(...,k,l) = rkrl * g(...,k,l-1) + g(...,k+1,l-1)
-        xkxl = xk - bas_x[lsh];
-        ykyl = yk - bas_y[lsh];
-        zkzl = zk - bas_z[lsh];
         //for (l = 0; l < klmin; ++l) {
         //for (k = mmax-1-l; k >= 0; k--) {
         //    off = l*dl + k*dk;
@@ -450,43 +448,77 @@ static void GINTint2e_jk_kernel(JKMatrix jk, BasisProdOffsets offsets)
     int nprim_kl = c_envs.nprim_kl;
     int prim_ij = offsets.primitive_ij + task_ij * nprim_ij;
     int prim_kl = offsets.primitive_kl + task_kl * nprim_kl;
-    int *bas_pair2bra = c_bpcache.bas_pair2bra;
-    int *bas_pair2ket = c_bpcache.bas_pair2ket;
-    int ish = bas_pair2bra[bas_ij];
-    int jsh = bas_pair2ket[bas_ij];
-    int ksh = bas_pair2bra[bas_kl];
-    int lsh = bas_pair2ket[bas_kl];
+    int2 *bas_pair2braket = c_bpcache.bas_pair2braket;
+    int2 pair_ij = bas_pair2braket[bas_ij];
+    int2 pair_kl = bas_pair2braket[bas_kl];
+    int ish = pair_ij.x;
+    int jsh = pair_ij.y;
+    int ksh = pair_kl.x;
+    int lsh = pair_kl.y;
 
     int task_id = task_ij + ntasks_ij * task_kl;
-    double *uw = c_envs.uw + task_id * nprim_ij * nprim_kl * NROOTS * 2;
+    double* __restrict__ uw = c_envs.uw + task_id * nprim_ij * nprim_kl * NROOTS * 2;
     double gout[GOUTSIZE];
-    double *g = gout + c_envs.nf;
+    double* __restrict__ g = gout + c_envs.nf;
+
     int i;
     for (i = 0; i < c_envs.nf; ++i) {
         gout[i] = 0;
     }
 
-    int ij, kl;
-    int as_ish, as_jsh, as_ksh, as_lsh;
-    if (c_envs.ibase) {
-        as_ish = ish;
-        as_jsh = jsh;
-    } else {
-        as_ish = jsh;
-        as_jsh = ish;
+    double* __restrict__ e12 = c_bpcache.e12;
+    BasisCoords* __restrict__ bas_coords = c_bpcache.bas_coords;
+    BasisCoords bc_i = bas_coords[ish];
+    BasisCoords bc_j = bas_coords[jsh];
+    BasisCoords bc_k = bas_coords[ksh];
+    BasisCoords bc_l = bas_coords[lsh];
+    double* __restrict__ expi = c_bpcache.exps + bc_i.exp_off;
+    double* __restrict__ expj = c_bpcache.exps + bc_j.exp_off;
+    double* __restrict__ expk = c_bpcache.exps + bc_k.exp_off;
+    double* __restrict__ expl = c_bpcache.exps + bc_l.exp_off;
+    int iprim = bc_i.nprim;
+    int jprim = bc_j.nprim;
+    int kprim = bc_k.nprim;
+    int lprim = bc_l.nprim;
+
+    if (!c_envs.ibase) {
+        BasisCoords tmp = bc_i;
+        bc_i = bc_j;
+        bc_j = tmp;
     }
-    if (c_envs.kbase) {
-        as_ksh = ksh;
-        as_lsh = lsh;
-    } else {
-        as_ksh = lsh;
-        as_lsh = ksh;
+    if (!c_envs.kbase) {
+        BasisCoords tmp = bc_k;
+        bc_k = bc_l;
+        bc_l = tmp;
     }
-    for (ij = prim_ij; ij < prim_ij+nprim_ij; ++ij) {
-    for (kl = prim_kl; kl < prim_kl+nprim_kl; ++kl) {
-        GINTg0_2e_2d4d<NROOTS>(g, uw, norm, as_ish, as_jsh, as_ksh, as_lsh, ij, kl);
-        GINTgout2e<NROOTS>(gout, g);
-        uw += NROOTS * 2;
+
+    double ai, aj, ak, al;
+    int ip, jp, kp, lp, ij, kl;
+    for (ij = prim_ij, ip = 0; ip < iprim; ip++) {
+    for (jp = 0; jp < jprim; jp++, ij++) {
+        if (c_envs.ibase) {
+            ai = expi[ip];
+            aj = expj[jp];
+        } else {
+            aj = expi[ip];
+            ai = expj[jp];
+        }
+        double eij = e12[ij];
+        for (kl = prim_kl, kp = 0; kp < kprim; kp++) {
+        for (lp = 0; lp < lprim; lp++, kl++) {
+            if (c_envs.kbase) {
+                ak = expk[kp];
+                al = expl[lp];
+            } else {
+                al = expk[kp];
+                ak = expl[lp];
+            }
+            double ekl = e12[kl];
+            GINTg0_2e_2d4d<NROOTS>(g, uw, norm, eij, ekl,
+                                   ai, aj, ak, al, bc_i, bc_j, bc_k, bc_l);
+            GINTgout2e<NROOTS>(gout, g);
+            uw += NROOTS * 2;
+        } }
     } }
 
     GINTkernel_getjk(jk, gout, ish, jsh, ksh, lsh);
@@ -516,51 +548,86 @@ static void GINTint2e_jk_kernel0000(JKMatrix jk, BasisProdOffsets offsets)
     int nprim_kl = c_envs.nprim_kl;
     int prim_ij = offsets.primitive_ij + task_ij * nprim_ij;
     int prim_kl = offsets.primitive_kl + task_kl * nprim_kl;
-    int *bas_pair2bra = c_bpcache.bas_pair2bra;
-    int *bas_pair2ket = c_bpcache.bas_pair2ket;
-    int *ao_loc = c_bpcache.ao_loc;
-    int ish = bas_pair2bra[bas_ij];
-    int jsh = bas_pair2ket[bas_ij];
-    int ksh = bas_pair2bra[bas_kl];
-    int lsh = bas_pair2ket[bas_kl];
-    int i0 = ao_loc[ish];
-    int j0 = ao_loc[jsh];
-    int k0 = ao_loc[ksh];
-    int l0 = ao_loc[lsh];
-
-    double* __restrict__ a12 = c_bpcache.a12;
+    int2 *bas_pair2braket = c_bpcache.bas_pair2braket;
+    int2 pair_ij = bas_pair2braket[bas_ij];
+    int2 pair_kl = bas_pair2braket[bas_kl];
+    int ish = pair_ij.x;
+    int jsh = pair_ij.y;
+    int ksh = pair_kl.x;
+    int lsh = pair_kl.y;
     double* __restrict__ e12 = c_bpcache.e12;
-    double* __restrict__ x12 = c_bpcache.x12;
-    double* __restrict__ y12 = c_bpcache.y12;
-    double* __restrict__ z12 = c_bpcache.z12;
-    int ij, kl, i_dm;
+    BasisCoords* __restrict__ bas_coords = c_bpcache.bas_coords;
+    BasisCoords bc_i = bas_coords[ish];
+    BasisCoords bc_j = bas_coords[jsh];
+    BasisCoords bc_k = bas_coords[ksh];
+    BasisCoords bc_l = bas_coords[lsh];
+    double xi = bc_i.x;
+    double yi = bc_i.y;
+    double zi = bc_i.z;
+    double xj = bc_j.x;
+    double yj = bc_j.y;
+    double zj = bc_j.z;
+    double xk = bc_k.x;
+    double yk = bc_k.y;
+    double zk = bc_k.z;
+    double xl = bc_l.x;
+    double yl = bc_l.y;
+    double zl = bc_l.z;
+    double xixj = xi - xj;
+    double yiyj = yi - yj;
+    double zizj = zi - zj;
+    double xkxl = xk - xl;
+    double ykyl = yk - yl;
+    double zkzl = zk - zl;
+    double* __restrict__ expi = c_bpcache.exps + bc_i.exp_off;
+    double* __restrict__ expj = c_bpcache.exps + bc_j.exp_off;
+    double* __restrict__ expk = c_bpcache.exps + bc_k.exp_off;
+    double* __restrict__ expl = c_bpcache.exps + bc_l.exp_off;
+    int iprim = bc_i.nprim;
+    int jprim = bc_j.nprim;
+    int kprim = bc_k.nprim;
+    int lprim = bc_l.nprim;
+    int i0 = bc_i.ao_loc;
+    int j0 = bc_j.ao_loc;
+    int k0 = bc_k.ao_loc;
+    int l0 = bc_l.ao_loc;
+
     double gout0 = 0;
-    for (ij = prim_ij; ij < prim_ij+nprim_ij; ++ij) {
-    for (kl = prim_kl; kl < prim_kl+nprim_kl; ++kl) {
-        double aij = a12[ij];
+    int ip, jp, kp, lp, ij, kl, i_dm;
+    for (ij = prim_ij, ip = 0; ip < iprim; ip++) { double ai = expi[ip];
+    for (jp = 0; jp < jprim; jp++, ij++) {
+        double aj = expj[jp];
+        double aij = ai + aj;
+        double aj_aij = aj / aij;
+        double xij = xi - xixj * aj_aij;
+        double yij = yi - yiyj * aj_aij;
+        double zij = zi - zizj * aj_aij;
         double eij = e12[ij];
-        double xij = x12[ij];
-        double yij = y12[ij];
-        double zij = z12[ij];
-        double akl = a12[kl];
-        double ekl = e12[kl];
-        double xkl = x12[kl];
-        double ykl = y12[kl];
-        double zkl = z12[kl];
-        double xijxkl = xij - xkl;
-        double yijykl = yij - ykl;
-        double zijzkl = zij - zkl;
-        double aijkl = aij + akl;
-        double a1 = aij * akl;
-        double a0 = a1 / aijkl;
-        double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
-        double fac = norm * eij * ekl / (sqrt(aijkl) * a1);
-        if (x > 3.e-7) {
-            double tt = sqrt(x);
-            double fmt0 = SQRTPIE4 / tt * erf(tt);
-            fac *= fmt0;
-        }
-        gout0 += fac;
+        for (kl = prim_kl, kp = 0; kp < kprim; kp++) { double ak = expk[kp];
+        for (lp = 0; lp < lprim; lp++, kl++) {
+            double al = expl[lp];
+            double akl = ak + al;
+            double al_akl = al / akl;
+            double xkl = xk - xkxl * al_akl;
+            double ykl = yk - ykyl * al_akl;
+            double zkl = zk - zkzl * al_akl;
+            double ekl = e12[kl];
+
+            double xijxkl = xij - xkl;
+            double yijykl = yij - ykl;
+            double zijzkl = zij - zkl;
+            double aijkl = aij + akl;
+            double a1 = aij * akl;
+            double a0 = a1 / aijkl;
+            double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
+            double fac = norm * eij * ekl / (sqrt(aijkl) * a1);
+            if (x > 3.e-7) {
+                double tt = sqrt(x);
+                double fmt0 = SQRTPIE4 / tt * erf(tt);
+                fac *= fmt0;
+            }
+            gout0 += fac;
+        } }
     } }
 
     int n_dm = jk.n_dm;
@@ -610,83 +677,110 @@ static void GINTint2e_jk_kernel1000(JKMatrix jk, BasisProdOffsets offsets)
     int nprim_kl = c_envs.nprim_kl;
     int prim_ij = offsets.primitive_ij + task_ij * nprim_ij;
     int prim_kl = offsets.primitive_kl + task_kl * nprim_kl;
-    int *bas_pair2bra = c_bpcache.bas_pair2bra;
-    int *bas_pair2ket = c_bpcache.bas_pair2ket;
-    int *ao_loc = c_bpcache.ao_loc;
-    int ish = bas_pair2bra[bas_ij];
-    int jsh = bas_pair2ket[bas_ij];
-    int ksh = bas_pair2bra[bas_kl];
-    int lsh = bas_pair2ket[bas_kl];
-    int i0 = ao_loc[ish];
-    int j0 = ao_loc[jsh];
-    int k0 = ao_loc[ksh];
-    int l0 = ao_loc[lsh];
-
-    double* __restrict__ a12 = c_bpcache.a12;
+    int2 *bas_pair2braket = c_bpcache.bas_pair2braket;
+    int2 pair_ij = bas_pair2braket[bas_ij];
+    int2 pair_kl = bas_pair2braket[bas_kl];
+    int ish = pair_ij.x;
+    int jsh = pair_ij.y;
+    int ksh = pair_kl.x;
+    int lsh = pair_kl.y;
     double* __restrict__ e12 = c_bpcache.e12;
-    double* __restrict__ x12 = c_bpcache.x12;
-    double* __restrict__ y12 = c_bpcache.y12;
-    double* __restrict__ z12 = c_bpcache.z12;
+    BasisCoords* __restrict__ bas_coords = c_bpcache.bas_coords;
+    BasisCoords bc_i = bas_coords[ish];
+    BasisCoords bc_j = bas_coords[jsh];
+    BasisCoords bc_k = bas_coords[ksh];
+    BasisCoords bc_l = bas_coords[lsh];
+    double xi = bc_i.x;
+    double yi = bc_i.y;
+    double zi = bc_i.z;
+    double xj = bc_j.x;
+    double yj = bc_j.y;
+    double zj = bc_j.z;
+    double xk = bc_k.x;
+    double yk = bc_k.y;
+    double zk = bc_k.z;
+    double xl = bc_l.x;
+    double yl = bc_l.y;
+    double zl = bc_l.z;
+    double xixj = xi - xj;
+    double yiyj = yi - yj;
+    double zizj = zi - zj;
+    double xkxl = xk - xl;
+    double ykyl = yk - yl;
+    double zkzl = zk - zl;
+    double* __restrict__ expi = c_bpcache.exps + bc_i.exp_off;
+    double* __restrict__ expj = c_bpcache.exps + bc_j.exp_off;
+    double* __restrict__ expk = c_bpcache.exps + bc_k.exp_off;
+    double* __restrict__ expl = c_bpcache.exps + bc_l.exp_off;
+    int iprim = bc_i.nprim;
+    int jprim = bc_j.nprim;
+    int kprim = bc_k.nprim;
+    int lprim = bc_l.nprim;
+    int i0 = bc_i.ao_loc;
+    int j0 = bc_j.ao_loc;
+    int k0 = bc_k.ao_loc;
+    int l0 = bc_l.ao_loc;
+
     double gout0 = 0;
     double gout1 = 0;
     double gout2 = 0;
-
-    int ij, kl, i_dm;
-    int nbas = c_bpcache.nbas;
-    double* __restrict__ bas_x = c_bpcache.bas_coords;
-    double* __restrict__ bas_y = bas_x + nbas;
-    double* __restrict__ bas_z = bas_y + nbas;
-    double xi = bas_x[ish];
-    double yi = bas_y[ish];
-    double zi = bas_z[ish];
-    for (ij = prim_ij; ij < prim_ij+nprim_ij; ++ij) {
-    for (kl = prim_kl; kl < prim_kl+nprim_kl; ++kl) {
-        double aij = a12[ij];
+    int ip, jp, kp, lp, ij, kl, i_dm;
+    for (ij = prim_ij, ip = 0; ip < iprim; ip++) { double ai = expi[ip];
+    for (jp = 0; jp < jprim; jp++, ij++) {
+        double aj = expj[jp];
+        double aij = ai + aj;
+        double aj_aij = aj / aij;
+        double xij = xi - xixj * aj_aij;
+        double yij = yi - yiyj * aj_aij;
+        double zij = zi - zizj * aj_aij;
         double eij = e12[ij];
-        double xij = x12[ij];
-        double yij = y12[ij];
-        double zij = z12[ij];
-        double akl = a12[kl];
-        double ekl = e12[kl];
-        double xkl = x12[kl];
-        double ykl = y12[kl];
-        double zkl = z12[kl];
-        double xijxkl = xij - xkl;
-        double yijykl = yij - ykl;
-        double zijzkl = zij - zkl;
-        double aijkl = aij + akl;
-        double a1 = aij * akl;
-        double a0 = a1 / aijkl;
-        double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
-        double fac = eij * ekl / (sqrt(aijkl) * a1);
-        double root0, weight0;
-        if (x < 3.e-7) {
-            root0 = 0.5;
-            weight0 = 1.;
-        } else {
-            double tt = sqrt(x);
-            double fmt0 = SQRTPIE4 / tt * erf(tt);
-            weight0 = fmt0;
-            double e = exp(-x);
-            double b = .5 / x;
-            double fmt1 = b * (fmt0 - e);
-            root0 = fmt1 / (fmt0 - fmt1);
-        }
+        for (kl = prim_kl, kp = 0; kp < kprim; kp++) { double ak = expk[kp];
+        for (lp = 0; lp < lprim; lp++, kl++) {
+            double al = expl[lp];
+            double akl = ak + al;
+            double al_akl = al / akl;
+            double xkl = xk - xkxl * al_akl;
+            double ykl = yk - ykyl * al_akl;
+            double zkl = zk - zkzl * al_akl;
+            double ekl = e12[kl];
 
-        double u2 = a0 * root0;
-        double tmp2 = akl * u2 / (u2 * aijkl + a1);;
-        double c00x = xij - xi - tmp2 * xijxkl;
-        double c00y = yij - yi - tmp2 * yijykl;
-        double c00z = zij - zi - tmp2 * zijzkl;
-        double g_0 = 1;
-        double g_1 = c00x;
-        double g_2 = 1;
-        double g_3 = c00y;
-        double g_4 = norm * fac * weight0;
-        double g_5 = g_4 * c00z;
-        gout0 += g_1 * g_2 * g_4;
-        gout1 += g_0 * g_3 * g_4;
-        gout2 += g_0 * g_2 * g_5;
+            double xijxkl = xij - xkl;
+            double yijykl = yij - ykl;
+            double zijzkl = zij - zkl;
+            double aijkl = aij + akl;
+            double a1 = aij * akl;
+            double a0 = a1 / aijkl;
+            double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
+            double fac = eij * ekl / (sqrt(aijkl) * a1);
+            double root0, weight0;
+            if (x < 3.e-7) {
+                root0 = 0.5;
+                weight0 = 1.;
+            } else {
+                double tt = sqrt(x);
+                double fmt0 = SQRTPIE4 / tt * erf(tt);
+                weight0 = fmt0;
+                double e = exp(-x);
+                double b = .5 / x;
+                double fmt1 = b * (fmt0 - e);
+                root0 = fmt1 / (fmt0 - fmt1);
+            }
+
+            double u2 = a0 * root0;
+            double tmp2 = akl * u2 / (u2 * aijkl + a1);;
+            double c00x = xij - xi - tmp2 * xijxkl;
+            double c00y = yij - yi - tmp2 * yijykl;
+            double c00z = zij - zi - tmp2 * zijzkl;
+            double g_0 = 1;
+            double g_1 = c00x;
+            double g_2 = 1;
+            double g_3 = c00y;
+            double g_4 = norm * fac * weight0;
+            double g_5 = g_4 * c00z;
+            gout0 += g_1 * g_2 * g_4;
+            gout1 += g_0 * g_3 * g_4;
+            gout2 += g_0 * g_2 * g_5;
+        } }
     } }
 
     double d_0, d_1, d_2;
@@ -763,12 +857,13 @@ void GINTint2e_jk_kernel<4, GOUTSIZE4>(JKMatrix jk, BasisProdOffsets offsets)
     int nprim_kl = c_envs.nprim_kl;
     int prim_ij = offsets.primitive_ij + task_ij * nprim_ij;
     int prim_kl = offsets.primitive_kl + task_kl * nprim_kl;
-    int *bas_pair2bra = c_bpcache.bas_pair2bra;
-    int *bas_pair2ket = c_bpcache.bas_pair2ket;
-    int ish = bas_pair2bra[bas_ij];
-    int jsh = bas_pair2ket[bas_ij];
-    int ksh = bas_pair2bra[bas_kl];
-    int lsh = bas_pair2ket[bas_kl];
+    int2 *bas_pair2braket = c_bpcache.bas_pair2braket;
+    int2 pair_ij = bas_pair2braket[bas_ij];
+    int2 pair_kl = bas_pair2braket[bas_kl];
+    int ish = pair_ij.x;
+    int jsh = pair_ij.y;
+    int ksh = pair_kl.x;
+    int lsh = pair_kl.y;
 
     double uw[8];
     double gout[GOUTSIZE4];
@@ -778,46 +873,94 @@ void GINTint2e_jk_kernel<4, GOUTSIZE4>(JKMatrix jk, BasisProdOffsets offsets)
         gout[i] = 0;
     }
 
-    double* __restrict__ a12 = c_bpcache.a12;
-    double* __restrict__ x12 = c_bpcache.x12;
-    double* __restrict__ y12 = c_bpcache.y12;
-    double* __restrict__ z12 = c_bpcache.z12;
-    int ij, kl;
-    int as_ish, as_jsh, as_ksh, as_lsh;
-    if (c_envs.ibase) {
-        as_ish = ish;
-        as_jsh = jsh;
-    } else {
-        as_ish = jsh;
-        as_jsh = ish;
+    double* __restrict__ e12 = c_bpcache.e12;
+    BasisCoords* __restrict__ bas_coords = c_bpcache.bas_coords;
+    BasisCoords bc_i = bas_coords[ish];
+    BasisCoords bc_j = bas_coords[jsh];
+    BasisCoords bc_k = bas_coords[ksh];
+    BasisCoords bc_l = bas_coords[lsh];
+    double* __restrict__ expi = c_bpcache.exps + bc_i.exp_off;
+    double* __restrict__ expj = c_bpcache.exps + bc_j.exp_off;
+    double* __restrict__ expk = c_bpcache.exps + bc_k.exp_off;
+    double* __restrict__ expl = c_bpcache.exps + bc_l.exp_off;
+    int iprim = bc_i.nprim;
+    int jprim = bc_j.nprim;
+    int kprim = bc_k.nprim;
+    int lprim = bc_l.nprim;
+
+    if (!c_envs.ibase) {
+        BasisCoords tmp = bc_i;
+        bc_i = bc_j;
+        bc_j = tmp;
     }
-    if (c_envs.kbase) {
-        as_ksh = ksh;
-        as_lsh = lsh;
-    } else {
-        as_ksh = lsh;
-        as_lsh = ksh;
+    if (!c_envs.kbase) {
+        BasisCoords tmp = bc_k;
+        bc_k = bc_l;
+        bc_l = tmp;
     }
-    for (ij = prim_ij; ij < prim_ij+nprim_ij; ++ij) {
-    for (kl = prim_kl; kl < prim_kl+nprim_kl; ++kl) {
-        double aij = a12[ij];
-        double xij = x12[ij];
-        double yij = y12[ij];
-        double zij = z12[ij];
-        double akl = a12[kl];
-        double xkl = x12[kl];
-        double ykl = y12[kl];
-        double zkl = z12[kl];
-        double xijxkl = xij - xkl;
-        double yijykl = yij - ykl;
-        double zijzkl = zij - zkl;
-        double aijkl = aij + akl;
-        double a1 = aij * akl;
-        double a0 = a1 / aijkl;
-        double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
-        GINTrys_root4(x, uw);
-        GINTg0_2e_2d4d<4>(g, uw, norm, as_ish, as_jsh, as_ksh, as_lsh, ij, kl);
-        GINTgout2e<4>(gout, g);
+    double xi = bc_i.x;
+    double yi = bc_i.y;
+    double zi = bc_i.z;
+    double xj = bc_j.x;
+    double yj = bc_j.y;
+    double zj = bc_j.z;
+    double xk = bc_k.x;
+    double yk = bc_k.y;
+    double zk = bc_k.z;
+    double xl = bc_l.x;
+    double yl = bc_l.y;
+    double zl = bc_l.z;
+    double xixj = xi - xj;
+    double yiyj = yi - yj;
+    double zizj = zi - zj;
+    double xkxl = xk - xl;
+    double ykyl = yk - yl;
+    double zkzl = zk - zl;
+
+    double ai, aj, ak, al;
+    int ip, jp, kp, lp, ij, kl;
+    for (ij = prim_ij, ip = 0; ip < iprim; ip++) {
+    for (jp = 0; jp < jprim; jp++, ij++) {
+        if (c_envs.ibase) {
+            ai = expi[ip];
+            aj = expj[jp];
+        } else {
+            aj = expi[ip];
+            ai = expj[jp];
+        }
+        double aij = ai + aj;
+        double aj_aij = aj / aij;
+        double xij = xi - xixj * aj_aij;
+        double yij = yi - yiyj * aj_aij;
+        double zij = zi - zizj * aj_aij;
+        double eij = e12[ij];
+        for (kl = prim_kl, kp = 0; kp < kprim; kp++) {
+        for (lp = 0; lp < lprim; lp++, kl++) {
+            if (c_envs.kbase) {
+                ak = expk[kp];
+                al = expl[lp];
+            } else {
+                al = expk[kp];
+                ak = expl[lp];
+            }
+            double akl = ak + al;
+            double al_akl = al / akl;
+            double xkl = xk - xkxl * al_akl;
+            double ykl = yk - ykyl * al_akl;
+            double zkl = zk - zkzl * al_akl;
+            double ekl = e12[kl];
+            double xijxkl = xij - xkl;
+            double yijykl = yij - ykl;
+            double zijzkl = zij - zkl;
+            double aijkl = aij + akl;
+            double a1 = aij * akl;
+            double a0 = a1 / aijkl;
+            double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
+            GINTrys_root4(x, uw);
+            GINTg0_2e_2d4d<4>(g, uw, norm, eij, ekl,
+                              ai, aj, ak, al, bc_i, bc_j, bc_k, bc_l);
+            GINTgout2e<4>(gout, g);
+        } }
     } }
 
     GINTkernel_getjk(jk, gout, ish, jsh, ksh, lsh);
@@ -850,12 +993,13 @@ void GINTint2e_jk_kernel<5, GOUTSIZE5>(JKMatrix jk, BasisProdOffsets offsets)
     int nprim_kl = c_envs.nprim_kl;
     int prim_ij = offsets.primitive_ij + task_ij * nprim_ij;
     int prim_kl = offsets.primitive_kl + task_kl * nprim_kl;
-    int *bas_pair2bra = c_bpcache.bas_pair2bra;
-    int *bas_pair2ket = c_bpcache.bas_pair2ket;
-    int ish = bas_pair2bra[bas_ij];
-    int jsh = bas_pair2ket[bas_ij];
-    int ksh = bas_pair2bra[bas_kl];
-    int lsh = bas_pair2ket[bas_kl];
+    int2 *bas_pair2braket = c_bpcache.bas_pair2braket;
+    int2 pair_ij = bas_pair2braket[bas_ij];
+    int2 pair_kl = bas_pair2braket[bas_kl];
+    int ish = pair_ij.x;
+    int jsh = pair_ij.y;
+    int ksh = pair_kl.x;
+    int lsh = pair_kl.y;
 
     double uw[10];
     double gout[GOUTSIZE5];
@@ -865,46 +1009,94 @@ void GINTint2e_jk_kernel<5, GOUTSIZE5>(JKMatrix jk, BasisProdOffsets offsets)
         gout[i] = 0;
     }
 
-    double* __restrict__ a12 = c_bpcache.a12;
-    double* __restrict__ x12 = c_bpcache.x12;
-    double* __restrict__ y12 = c_bpcache.y12;
-    double* __restrict__ z12 = c_bpcache.z12;
-    int ij, kl;
-    int as_ish, as_jsh, as_ksh, as_lsh;
-    if (c_envs.ibase) {
-        as_ish = ish;
-        as_jsh = jsh;
-    } else {
-        as_ish = jsh;
-        as_jsh = ish;
+    double* __restrict__ e12 = c_bpcache.e12;
+    BasisCoords* __restrict__ bas_coords = c_bpcache.bas_coords;
+    BasisCoords bc_i = bas_coords[ish];
+    BasisCoords bc_j = bas_coords[jsh];
+    BasisCoords bc_k = bas_coords[ksh];
+    BasisCoords bc_l = bas_coords[lsh];
+    double* __restrict__ expi = c_bpcache.exps + bc_i.exp_off;
+    double* __restrict__ expj = c_bpcache.exps + bc_j.exp_off;
+    double* __restrict__ expk = c_bpcache.exps + bc_k.exp_off;
+    double* __restrict__ expl = c_bpcache.exps + bc_l.exp_off;
+    int iprim = bc_i.nprim;
+    int jprim = bc_j.nprim;
+    int kprim = bc_k.nprim;
+    int lprim = bc_l.nprim;
+
+    if (!c_envs.ibase) {
+        BasisCoords tmp = bc_i;
+        bc_i = bc_j;
+        bc_j = tmp;
     }
-    if (c_envs.kbase) {
-        as_ksh = ksh;
-        as_lsh = lsh;
-    } else {
-        as_ksh = lsh;
-        as_lsh = ksh;
+    if (!c_envs.kbase) {
+        BasisCoords tmp = bc_k;
+        bc_k = bc_l;
+        bc_l = tmp;
     }
-    for (ij = prim_ij; ij < prim_ij+nprim_ij; ++ij) {
-    for (kl = prim_kl; kl < prim_kl+nprim_kl; ++kl) {
-        double aij = a12[ij];
-        double xij = x12[ij];
-        double yij = y12[ij];
-        double zij = z12[ij];
-        double akl = a12[kl];
-        double xkl = x12[kl];
-        double ykl = y12[kl];
-        double zkl = z12[kl];
-        double xijxkl = xij - xkl;
-        double yijykl = yij - ykl;
-        double zijzkl = zij - zkl;
-        double aijkl = aij + akl;
-        double a1 = aij * akl;
-        double a0 = a1 / aijkl;
-        double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
-        GINTrys_root5(x, uw);
-        GINTg0_2e_2d4d<5>(g, uw, norm, as_ish, as_jsh, as_ksh, as_lsh, ij, kl);
-        GINTgout2e<5>(gout, g);
+    double xi = bc_i.x;
+    double yi = bc_i.y;
+    double zi = bc_i.z;
+    double xj = bc_j.x;
+    double yj = bc_j.y;
+    double zj = bc_j.z;
+    double xk = bc_k.x;
+    double yk = bc_k.y;
+    double zk = bc_k.z;
+    double xl = bc_l.x;
+    double yl = bc_l.y;
+    double zl = bc_l.z;
+    double xixj = xi - xj;
+    double yiyj = yi - yj;
+    double zizj = zi - zj;
+    double xkxl = xk - xl;
+    double ykyl = yk - yl;
+    double zkzl = zk - zl;
+
+    double ai, aj, ak, al;
+    int ip, jp, kp, lp, ij, kl;
+    for (ij = prim_ij, ip = 0; ip < iprim; ip++) {
+    for (jp = 0; jp < jprim; jp++, ij++) {
+        if (c_envs.ibase) {
+            ai = expi[ip];
+            aj = expj[jp];
+        } else {
+            aj = expi[ip];
+            ai = expj[jp];
+        }
+        double aij = ai + aj;
+        double aj_aij = aj / aij;
+        double xij = xi - xixj * aj_aij;
+        double yij = yi - yiyj * aj_aij;
+        double zij = zi - zizj * aj_aij;
+        double eij = e12[ij];
+        for (kl = prim_kl, kp = 0; kp < kprim; kp++) {
+        for (lp = 0; lp < lprim; lp++, kl++) {
+            if (c_envs.kbase) {
+                ak = expk[kp];
+                al = expl[lp];
+            } else {
+                al = expk[kp];
+                ak = expl[lp];
+            }
+            double akl = ak + al;
+            double al_akl = al / akl;
+            double xkl = xk - xkxl * al_akl;
+            double ykl = yk - ykyl * al_akl;
+            double zkl = zk - zkzl * al_akl;
+            double ekl = e12[kl];
+            double xijxkl = xij - xkl;
+            double yijykl = yij - ykl;
+            double zijzkl = zij - zkl;
+            double aijkl = aij + akl;
+            double a1 = aij * akl;
+            double a0 = a1 / aijkl;
+            double x = a0 * (xijxkl * xijxkl + yijykl * yijykl + zijzkl * zijzkl);
+            GINTrys_root5(x, uw);
+            GINTg0_2e_2d4d<5>(g, uw, norm, eij, ekl,
+                              ai, aj, ak, al, bc_i, bc_j, bc_k, bc_l);
+            GINTgout2e<5>(gout, g);
+        } }
     } }
 
     GINTkernel_getjk(jk, gout, ish, jsh, ksh, lsh);

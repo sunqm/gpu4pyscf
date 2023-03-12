@@ -60,6 +60,10 @@ static int GINTrun_tasks_jk(JKMatrix *jk, BasisProdOffsets *offsets, GINTEnvVars
     dim3 blocks((ntasks_ij+THREADSX-1)/THREADSX, (ntasks_kl+THREADSY-1)/THREADSY);
     switch (nrys_roots) {
     case 1:
+        //threads.x = THREADSX * 2;
+        //threads.y = THREADSY * 2;
+        //blocks.x = (ntasks_ij+THREADSX*2-1)/(THREADSX*2);
+        //blocks.y = (ntasks_kl+THREADSY*2-1)/(THREADSY*2);
         //GINTint2e_jk_kernel<1, GOUTSIZE1> <<<blocks, threads>>>(*offsets);
         if (envs->nf == 1) {
             GINTint2e_jk_kernel0000<<<blocks, threads>>>(*jk, *offsets);
@@ -68,6 +72,8 @@ static int GINTrun_tasks_jk(JKMatrix *jk, BasisProdOffsets *offsets, GINTEnvVars
         }
         break;
     case 2:
+        //threads.y = THREADSY * 2;
+        //blocks.y = (ntasks_kl+THREADSY*2-1)/(THREADSY*2);
         type_ijkl = (envs->i_l << 6) | (envs->j_l << 4) | (envs->k_l << 2) | envs->l_l;
         switch (type_ijkl) {
         case (1<<6)|(0<<4)|(1<<2)|0: GINTint2e_jk_kernel1010<<<blocks, threads>>>(*jk, *offsets); break;

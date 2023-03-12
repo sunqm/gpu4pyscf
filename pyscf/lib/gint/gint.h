@@ -18,8 +18,10 @@
  */
 
 #include <stdlib.h>
-#include <cint.h>
+#include <stdint.h>
 #include <stddef.h>
+#include <cuda_runtime.h>
+#include <cint.h>
 
 // boundaries for gint
 // up to g functions
@@ -103,6 +105,16 @@ typedef struct {
 } ContractionProdType;
 
 typedef struct {
+    double x;
+    double y;
+    double z;
+    uint16_t exp_off;
+    uint8_t nprim;
+    uint8_t _padding;
+    int ao_loc;
+} BasisCoords;
+
+typedef struct {
         int ntasks_ij;
         int ntasks_kl;
         int bas_ij;
@@ -115,21 +127,17 @@ typedef struct {
     int nbas;  // len(bas_coords)
     int ncptype;  // len(cptype)
     ContractionProdType *cptype;
-    int *bas_pairs_locs;  // len(bas_pair2bra) = sum(cptype[:].nparis)
+    int *bas_pairs_locs;  // len(bas_pair2braket) = sum(cptype[:].nparis)
     int *primitive_pairs_locs;  // len(a12) = sum(cptype[:].nparis*cptype[:].nprim_12)
     int *bas_pair2shls;
     double *aexyz;
 
     // Data below held on GPU global memory
-    double *bas_coords;  // basis coordinates
-    int *bas_pair2bra;
-    int *bas_pair2ket;
-    int *ao_loc;
-    double *a12;
+    BasisCoords *bas_coords;
+    int2 *bas_pair2braket;
     double *e12;
-    double *x12;
-    double *y12;
-    double *z12;
+    double *exps;
+    int *ao_loc;
 } BasisProdCache;
 
 

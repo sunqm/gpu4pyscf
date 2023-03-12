@@ -18,6 +18,7 @@
  */
 
 #include <math.h>
+#include <cuda_runtime.h>
 #include "g2e.h"
 
 double CINTcommon_fac_sp(int l);
@@ -60,19 +61,28 @@ void GINTinit_contraction_types(BasisProdCache *bpcache,
         }
 }
 
-void GINTsort_bas_coordinates(double *bas_coords, int *atm, int natm,
-                              int *bas, int nbas, double *env)
+void GINTinit_bas_coords(BasisCoords *bas_coords, double *exps, int *ao_loc,
+                         int *atm, int natm, int *bas, int nbas, double *env)
 {
-        int ib, atm_id, ptr_coord;
-        double *bas_x = bas_coords;
-        double *bas_y = bas_x + nbas;
-        double *bas_z = bas_y + nbas;
+        int ib, ip;
+        int ptr = 0;
+        BasisCoords bc;
         for (ib = 0; ib < nbas; ib++) {
-                atm_id = bas[ATOM_OF + ib * BAS_SLOTS];
-                ptr_coord = atm[PTR_COORD + atm_id * ATM_SLOTS];
-                bas_x[ib] = env[ptr_coord  ];
-                bas_y[ib] = env[ptr_coord+1];
-                bas_z[ib] = env[ptr_coord+2];
+                int nprim = bas[NPRIM_OF + ib * BAS_SLOTS];
+                int atm_id = bas[ATOM_OF + ib * BAS_SLOTS];
+                int ptr_coord = atm[PTR_COORD + atm_id * ATM_SLOTS];
+                double *ai = env + bas[PTR_EXP + ib * BAS_SLOTS];
+                bc.x = env[ptr_coord  ];
+                bc.y = env[ptr_coord+1];
+                bc.z = env[ptr_coord+2];
+                bc.exp_off = ptr;
+                bc.nprim = nprim;
+                bc.ao_loc = ao_loc[ib];
+                bas_coords[ib] = bc;
+                for (ip = 0; ip < nprim; ip++) {
+                        exps[ptr+ip] = ai[ip];
+                }
+                ptr += nprim;
         }
 }
 
@@ -120,9 +130,9 @@ void GINTinit_aexyz(double *aexyz, BasisProdCache *bpcache, double diag_fac,
                 for (count = off, ip = 0; ip < npi; ip++) {
                 for (jp = 0; jp < npj; jp++, count++) {
                         aij = ai[ip] + aj[jp];
-                        a12[count] = aij;
                         e12[count] = norm * ci[ip] * cj[jp] *
                                 exp(-dist_ij * ai[ip] * aj[jp] / aij);
+                        a12[count] = aij;
                         x12[count] = (ai[ip]*ri[0] + aj[jp]*rj[0]) / aij;
                         y12[count] = (ai[ip]*ri[1] + aj[jp]*rj[1]) / aij;
                         z12[count] = (ai[ip]*ri[2] + aj[jp]*rj[2]) / aij;

@@ -61,6 +61,10 @@ static int GINTfill_int2e_tasks(ERITensor *eri, BasisProdOffsets *offsets, GINTE
     dim3 blocks((ntasks_ij+THREADSX-1)/THREADSX, (ntasks_kl+THREADSY-1)/THREADSY);
     switch (nrys_roots) {
     case 1:
+        //threads.x = THREADSX * 2;
+        //threads.y = THREADSY * 2;
+        //blocks.x = (ntasks_ij+THREADSX*2-1)/(THREADSX*2);
+        //blocks.y = (ntasks_kl+THREADSY*2-1)/(THREADSY*2);
         type_ijkl = (envs->i_l << 3) | (envs->j_l << 2) | (envs->k_l << 1) | envs->l_l;
         //GINTfill_int2e_kernel<1, GOUTSIZE1> <<<blocks, threads>>>(*offsets);
         switch (type_ijkl) {
@@ -72,6 +76,8 @@ static int GINTfill_int2e_tasks(ERITensor *eri, BasisProdOffsets *offsets, GINTE
         }
         break;
     case 2:
+        //threads.y = THREADSY * 2;
+        //blocks.y = (ntasks_kl+THREADSY*2-1)/(THREADSY*2);
         type_ijkl = (envs->i_l << 6) | (envs->j_l << 4) | (envs->k_l << 2) | envs->l_l;
         switch (type_ijkl) {
         case (0<<6)|(0<<4)|(1<<2)|1: GINTfill_int2e_kernel0011<<<blocks, threads>>>(*eri, *offsets); break;
@@ -169,11 +175,12 @@ void GINTdel_basis_prod(BasisProdCache **pbp)
         free(bpcache->aexyz);
     }
 
-    if (bpcache->a12 != NULL) {
+    if (bpcache->e12 != NULL) {
         FREE(bpcache->bas_coords);
-        FREE(bpcache->bas_pair2bra);
+        FREE(bpcache->exps);
+        FREE(bpcache->bas_pair2braket);
+        FREE(bpcache->e12);
         FREE(bpcache->ao_loc);
-        FREE(bpcache->a12);
     }
 
     free(bpcache);
@@ -203,22 +210,34 @@ void GINTinit_basis_prod(BasisProdCache **pbp, double diag_fac, int *ao_loc,
 
     // initialize basis coordinates on GPU memory
     bpcache->nbas = nbas;
-    double *bas_coords = (double *)malloc(sizeof(double) * nbas * 3);
-    GINTsort_bas_coordinates(bas_coords, atm, natm, bas, nbas, env);
-    DEVICE_INIT(double, d_bas_coords, bas_coords, nbas * 3);
+    int ib;
+    int npgto = 0;
+    for (ib = 0; ib < nbas; ib++) {
+        npgto += bas[NPRIM_OF + ib * BAS_SLOTS];
+    }
+    BasisCoords *bas_coords = (BasisCoords *)malloc(sizeof(BasisCoords) * nbas);
+    double *exps = (double *)malloc(sizeof(double) * npgto);
+    GINTinit_bas_coords(bas_coords, exps, ao_loc, atm, natm, bas, nbas, env);
+    DEVICE_INIT(BasisCoords, d_bas_coords, bas_coords, nbas);
+    DEVICE_INIT(double, d_exps, exps, npgto);
     bpcache->bas_coords = d_bas_coords;
+    bpcache->exps = d_exps;
+    free(exps);
     free(bas_coords);
 
     // initialize pair data on GPU memory
-    DEVICE_INIT(double, d_aexyz, aexyz, n_primitive_pairs * 5);
-    DEVICE_INIT(int, d_bas_pair2shls, bas_pair2shls, n_bas_pairs * 2);
-    bpcache->a12 = d_aexyz;
-    bpcache->e12 = d_aexyz + n_primitive_pairs * 1;
-    bpcache->x12 = d_aexyz + n_primitive_pairs * 2;
-    bpcache->y12 = d_aexyz + n_primitive_pairs * 3;
-    bpcache->z12 = d_aexyz + n_primitive_pairs * 4;
-    bpcache->bas_pair2bra = d_bas_pair2shls;
-    bpcache->bas_pair2ket = d_bas_pair2shls + n_bas_pairs;
+    DEVICE_INIT(double, d_e12, aexyz+n_primitive_pairs, n_primitive_pairs);
+    bpcache->e12 = d_e12;
+    int2 *bas_pair2braket = (int2 *)malloc(sizeof(int2) * n_bas_pairs);
+    int *bas_pair2bra = bas_pair2shls;
+    int *bas_pair2ket = bas_pair2shls + n_bas_pairs;
+    for (int i = 0; i < n_bas_pairs; i++) {
+        bas_pair2braket[i].x = bas_pair2bra[i];
+        bas_pair2braket[i].y = bas_pair2ket[i];
+    }
+    DEVICE_INIT(int2, d_bas_pair2shls, bas_pair2braket, n_bas_pairs);
+    bpcache->bas_pair2braket = d_bas_pair2shls;
+    free(bas_pair2braket);
 }
 
 int GINTfill_int2e(BasisProdCache *bpcache, double *eri, int nao,

@@ -73,7 +73,6 @@ def get_jk(mol, dm, hermi=1, vhfopt=None, with_j=True, with_k=True, omega=None,
             scripts.append('jk->s1il')
 
     l_symb = lib.param.ANGULAR
-    pair2bra, pair2ket = vhfopt.bas_pair2shls
     bas_pairs_locs = vhfopt.bas_pairs_locs
     log_qs = vhfopt.log_qs
     direct_scf_tol = vhfopt.direct_scf_tol
