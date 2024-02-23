@@ -443,7 +443,6 @@ def _make_eris_incore(mycc, mo_coeff=None):
     cupy.get_default_memory_pool().set_limit(mem_avail)
     blksize = max(BLKMIN, int(min((nao_cart+3)/4, blksize,
                                   (mem_avail*.5/8/nao_cart**2)**.5)))
-    logger.debug1(mycc, 'blksize %d nao %d', blksize, nao_cart)
 
     vhfopt = gpu_hf._VHFOpt(mycc.mol, 'int2e')
     vhfopt.build(group_size=blksize, diag_block_with_triu=True)
@@ -458,6 +457,8 @@ def _make_eris_incore(mycc, mo_coeff=None):
     log_qs = vhfopt.log_qs
     cp_idx, cp_jdx = np.tril_indices(len(vhfopt.uniq_l_ctr))
 
+    blksize = max(blksize, (ao_loc[l_ctr_offsets[1:]] -
+                            ao_loc[l_ctr_offsets[:-1]]).max())
     ppOO = np.empty((nao,nao,nocc,nocc))
     pPoO = np.zeros((nao,nao,nocc,nocc))
     eribuf = cupy.empty(blksize**2*nao**2)
