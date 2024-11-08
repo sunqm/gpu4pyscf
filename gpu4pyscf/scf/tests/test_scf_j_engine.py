@@ -43,3 +43,22 @@ def test_j_engine():
     ref = get_jk(mol, dm, with_k=False)[0]
     assert abs(lib.fp(vj1) - -2327.4715195591784) < 1e-9
     assert abs(vj1 - ref).max() < 1e-9
+
+def test_j_lmax():
+    mol = pyscf.M(
+        atom = '''
+        O   0.000    0.    0.1174
+        H  -0.757    0.   -0.4696
+        H   0.757    0.   -0.4696
+        ''',
+        basis=('sto3g', [[5, [1, 1]]])
+        unit='B',)
+
+    np.random.seed(9)
+    nao = mol.nao
+    dm = np.random.rand(nao, nao)
+
+    vj = j_engine.get_j(mol, dm, hermi=0)
+    vj1 = vj.get()
+    ref = get_jk(mol, dm, hermi=0, with_k=False)[0]
+    assert abs(vj1 - ref).max() < 1e-9

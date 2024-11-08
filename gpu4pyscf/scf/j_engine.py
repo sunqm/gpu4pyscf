@@ -26,6 +26,7 @@ import numpy as np
 import cupy as cp
 import scipy.linalg
 from pyscf import lib
+from pyscf.scf import _vhf
 from pyscf import __config__
 from gpu4pyscf.lib.cupy_helper import load_library, condense, sandwich_dot, transpose_sum
 from gpu4pyscf.__config__ import props as gpu_specs
@@ -46,16 +47,14 @@ THREADS = 256
 libvhf_md = load_library('libgvhf_md')
 libvhf_md.MD_build_j.restype = ctypes.c_int
 
-def get_j(mol, dm, hermi=1, vhfopt=None, omega=None, verbose=None):
+def get_j(mol, dm, hermi=1, vhfopt=None, verbose=None):
     '''Compute J matrix
     '''
     log = logger.new_logger(mol, verbose)
     cput0 = log.init_timer()
     if vhfopt is None:
-        with mol.with_range_coulomb(omega):
-            vhfopt = _VHFOpt(mol).build()
-    if omega is None:
-        omega = mol.omega
+        vhfopt = _VHFOpt(mol).build()
+    assert mol.omega == 0
 
     mol = vhfopt.mol
     nbas = mol.nbas
@@ -102,7 +101,7 @@ def get_j(mol, dm, hermi=1, vhfopt=None, omega=None, verbose=None):
     uniq_l = uniq_l_ctr[:,0]
     l_ctr_bas_loc = vhfopt.l_ctr_offsets
     l_symb = [lib.param.ANGULAR[i] for i in uniq_l]
-    n_groups = len(uniq_l_ctr)
+    n_groups = np.count_nonzero(uniq_l <= LMAX)
     tile_mappings = {}
     workers = gpu_specs['multiProcessorCount']
     info = cp.empty(2, dtype=np.uint32)
@@ -113,7 +112,7 @@ def get_j(mol, dm, hermi=1, vhfopt=None, omega=None, verbose=None):
             jsh0, jsh1 = l_ctr_bas_loc[j], l_ctr_bas_loc[j+1]
             ij_shls = (ish0, ish1, jsh0, jsh1)
             sub_q = vhfopt.q_cond[ish0:ish1,jsh0:jsh1]
-            mask = sub_q > log_cutoff# - log_max_dm
+            mask = sub_q > log_cutoff - log_max_dm
             if i == j:
                 mask = cp.tril(mask)
             t_ij = (cp.arange(ish0, ish1, dtype=np.int32)[:,None] * nbas +
@@ -154,7 +153,7 @@ def get_j(mol, dm, hermi=1, vhfopt=None, omega=None, verbose=None):
                         lib.c_null_ptr(),
                         ctypes.c_float(log_cutoff-log_max_dm),
                         ctypes.cast(info.data.ptr, ctypes.c_void_p),
-                        ctypes.c_int(workers), ctypes.c_double(omega),
+                        ctypes.c_int(workers),
                         mol._atm.ctypes, ctypes.c_int(mol.natm),
                         mol._bas.ctypes, ctypes.c_int(mol.nbas), _env.ctypes)
                     if err != 0:
@@ -183,6 +182,23 @@ def get_j(mol, dm, hermi=1, vhfopt=None, omega=None, verbose=None):
     vj = sandwich_dot(vj, vhfopt.coeff)
     vj = transpose_sum(vj)
     vj = vj.reshape(dm.shape)
+
+    h_shls = vhfopt.h_shls
+    if h_shls:
+        cput1 = log.timer_debug1('get_j pass 1 on gpu', *cput0)
+        log.debug3('Integrals for %s functions on CPU', l_symb[LMAX+1])
+        scripts = 'ji->s2kl'
+        shls_excludes = [0, h_shls[0]] * 4
+        dms = dms.get()
+        vj1 = _vhf.direct_mapdm('int2e_cart', 's8', scripts,
+                                dms, 1, mol._atm, mol._bas, mol._env,
+                                shls_excludes=shls_excludes)
+        coeff = vhfopt.coeff
+        idx, idy = np.tril_indices(nao, -1)
+        vj1[:,idy,idx] = vj1[:,idx,idy]
+        vj += sandwich_dot(cp.asarray(vj1), coeff)
+        log.timer_debug1('get_jk pass 2 for h functions on cpu', *cput1)
+
     log.timer('vj', *cput0)
     return vj
 

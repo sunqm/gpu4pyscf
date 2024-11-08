@@ -356,7 +356,7 @@ int MD_build_j(double *vj, double *dm, int n_dm, int nao,
                 int ntile_ij_pairs, int ntile_kl_pairs,
                 int *tile_ij_mapping, int *tile_kl_mapping, float *tile_q_cond,
                 float *q_cond, float *dm_cond, float cutoff,
-                uint32_t *batch_head, int workers, double omega,
+                uint32_t *batch_head, int workers,
                 int *atm, int natm, int *bas, int nbas, double *env)
 {
     uint16_t ish0 = shls_slice[0];
@@ -368,6 +368,7 @@ int MD_build_j(double *vj, double *dm, int n_dm, int nao,
     uint8_t lk = bas[ANG_OF + ksh0*BAS_SLOTS];
     uint8_t ll = bas[ANG_OF + lsh0*BAS_SLOTS];
     uint8_t order = li + lj + lk + ll;
+    double omega = env[PTR_RANGE_OMEGA];
     BoundsInfo bounds = {li, lj, lk, ll,
         0, 0, 0, 0,  0, 0, 0, 0,  0, 0, 0 , 0,
         ntile_ij_pairs, ntile_kl_pairs, tile_ij_mapping, tile_kl_mapping,

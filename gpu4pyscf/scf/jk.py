@@ -209,13 +209,11 @@ def get_jk(mol, dm, hermi=0, vhfopt=None, with_j=True, with_k=True, verbose=None
         idx, idy = np.tril_indices(nao, -1)
         if with_j:
             vj1[:,idy,idx] = vj1[:,idx,idy]
-            for i, v in enumerate(vj1):
-                vj[i] += coeff.T.dot(cp.asarray(v)).dot(coeff)
+            vj += sandwich_dot(cp.asarray(vj1), coeff)
         if with_k:
             if hermi:
                 vk1[:,idy,idx] = vk1[:,idx,idy]
-            for i, v in enumerate(vk1):
-                vk[i] += coeff.T.dot(cp.asarray(v)).dot(coeff)
+            vk += sandwich_dot(cp.asarray(vk1), coeff)
         log.timer_debug1('get_jk pass 2 for h functions on cpu', *cput1)
 
     log.timer('vj and vk', *cput0)

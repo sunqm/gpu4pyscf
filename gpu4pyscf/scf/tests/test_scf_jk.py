@@ -126,3 +126,44 @@ def test_jk_hermi0():
 
     assert abs(vj2+vj3 - vj1).max() < 1e-9
     assert abs(vk2+vk3 - vk1).max() < 1e-9
+
+def test_jk_lmax():
+    mol = pyscf.M(
+        atom = '''
+        O   0.000    0.    0.1174
+        H  -0.757    0.   -0.4696
+        H   0.757    0.   -0.4696
+        ''',
+        basis=('sto3g', [[5, [1, 1]]])
+        unit='B',)
+
+    np.random.seed(9)
+    nao = mol.nao
+    dm = np.random.rand(nao, nao)
+
+    vj, vk = jk.get_jk(mol, dm, hermi=0)
+    vj1 = vj.get()
+    vk1 = vk.get()
+    ref = get_jk(mol, dm, hermi=0)
+    assert abs(vj1 - ref[0]).max() < 1e-9
+    assert abs(vk1 - ref[1]).max() < 1e-9
+
+    vj = jk.get_j(mol, dm, hermi=0).get()
+    assert abs(vj - ref[0]).max() < 1e-9
+
+    dm = dm.dot(dm.T)
+    mol.omega = 0.2
+    vj, vk = jk.get_jk(mol, dm, hermi=1)
+    vj2 = vj.get()
+    vk2 = vk.get()
+    ref = get_jk(mol, dm, hermi=1)
+    assert abs(vj2 - ref[0]).max() < 1e-9
+    assert abs(vk2 - ref[1]).max() < 1e-9
+
+    mol.omega = -0.2
+    vj, vk = jk.get_jk(mol, dm, hermi=1)
+    vj3 = vj.get()
+    vk3 = vk.get()
+    ref = get_jk(mol, dm, hermi=1)
+    assert abs(vj3 - ref[0]).max() < 1e-9
+    assert abs(vk3 - ref[1]).max() < 1e-9
