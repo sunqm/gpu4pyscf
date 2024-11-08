@@ -134,8 +134,8 @@ def test_jk_lmax():
         H  -0.757    0.   -0.4696
         H   0.757    0.   -0.4696
         ''',
-        basis=('sto3g', [[5, [1, 1]]])
-        unit='B',)
+        basis=('sto3g', [[5, [1, 1]]]),
+        unit='B')
 
     np.random.seed(9)
     nao = mol.nao
