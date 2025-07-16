@@ -19,6 +19,7 @@ import numpy as np
 import cupy as cp
 from pyscf.data import nist
 from pyscf.gto.mole import conc_mol
+from pyscf.lib import StreamObject
 from gpu4pyscf.scf import j_engine
 from gpu4pyscf.gto.int3c1e import int1e_grids
 from gpu4pyscf.lib.cupy_helper import contract
@@ -26,6 +27,7 @@ from gpu4pyscf.lib.cupy_helper import eigh as generalized_eigh
 from cupyx.scipy.sparse.linalg import LinearOperator, cg
 from cupyx.scipy.linalg import expm as matrix_exp
 from gpu4pyscf.scf import cphf
+from gpu4pyscf.scf.hf import SCF
 from gpu4pyscf.lib.cupy_helper import pack_tril, unpack_tril
 from gpu4pyscf.lib.diis import DIIS
 from gpu4pyscf.lib import logger
@@ -950,6 +952,14 @@ def get_eda_charge_transfer_energy(mf_list, _make_mf, eda_cache):
     eda_cache["total_system_energy"] = sum_energy
     eda_cache["charge_transfer_energy"] = charge_transfer_energy
     return charge_transfer_energy
+
+def _make_mf(mol, mf_template):
+    assert isinstance(mf_template, SCF)
+    mf = mf_template.copy()
+    for key, attr in mf.__dict__.items():
+        if isinstance(attr, StreamObject):
+            setattr(mf, key, attr.copy())
+    return mf.reset(mol)
 
 def eval_ALMO_EDA_2_energies(mol_list, xc = "wB97X-V", xc_grid = (99,590), nlc_grid = (50,194), auxbasis = None,
                              conv_tol = 1e-10, conv_tol_cpscf = 1e-8, max_cycle = 100, verbose = 4):
