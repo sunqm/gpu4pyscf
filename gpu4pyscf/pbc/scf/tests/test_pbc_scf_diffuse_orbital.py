@@ -180,7 +180,7 @@ class KnownValues(unittest.TestCase):
     def test_kuks(self):
         cell = self.cell
         kpts = self.kpts
-        mf = cell.KRKS(kpts = kpts, xc = "LDA").to_gpu()
+        mf = cell.KUKS(kpts = kpts, xc = "LDA").to_gpu()
         mf.conv_tol = 1e-10
         # mf._numint = MultiGridNumInt(cell)
         test_energy = mf.kernel()
@@ -266,7 +266,7 @@ class KnownValues(unittest.TestCase):
     def test_kuks_smearing(self):
         cell = self.cell
         kpts = self.kpts
-        mf = cell.KRKS(kpts = kpts, xc = "LDA").to_gpu()
+        mf = cell.KUKS(kpts = kpts, xc = "LDA").to_gpu()
         mf.conv_tol = 1e-10
         # mf._numint = MultiGridNumInt(cell)
         mf = mf.smearing(5e-2, 'fermi')
