@@ -1,0 +1,315 @@
+/home/runner/sycl-venv/lib/python3.11/site-packages/setuptools/dist.py:334: InformationOnly: Normalizing '0.23.0dev0+381.gf039637a9' to '0.23.0.dev0+381.gf039637a9'
+  self.metadata.version = self._normalize_version(self.metadata.version)
+
+
+--------------------------------------------------------------------------------
+-- Trying 'Ninja' generator
+--------------------------------
+---------------------------
+----------------------
+-----------------
+------------
+-------
+--
+The --no-warn-unused-cli option is deprecated.  Use -Wno-unused-cli instead.
+-- The C compiler identification is IntelLLVM 2026.1.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/intel/oneapi/compiler/2026.1/bin/icx - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- The CXX compiler identification is IntelLLVM 2026.1.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/intel/oneapi/compiler/2026.1/bin/icpx - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (2.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/runner/dpctl/_cmake_test_compile/build
+--
+-------
+------------
+-----------------
+----------------------
+---------------------------
+--------------------------------
+-- Trying 'Ninja' generator - success
+--------------------------------------------------------------------------------
+
+Configuring Project
+  Working directory:
+    /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-build
+  Command:
+    /home/runner/sycl-venv/lib/python3.11/site-packages/cmake/data/bin/cmake /home/runner/dpctl -G Ninja -DCMAKE_MAKE_PROGRAM:FILEPATH=/home/runner/sycl-venv/bin/ninja --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX:PATH=/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install -DPYTHON_VERSION_STRING:STRING=3.11.16 -DSKBUILD:INTERNAL=TRUE -DCMAKE_MODULE_PATH:PATH=/home/runner/sycl-venv/lib/python3.11/site-packages/skbuild/resources/cmake -DPYTHON_EXECUTABLE:PATH=/home/runner/sycl-venv/bin/python -DPYTHON_INCLUDE_DIR:PATH=/opt/hostedtoolcache/Python/3.11.16/x64/include/python3.11 -DPYTHON_LIBRARY:PATH=/opt/hostedtoolcache/Python/3.11.16/x64/lib/libpython3.11.so -DPython_EXECUTABLE:PATH=/home/runner/sycl-venv/bin/python -DPython_ROOT_DIR:PATH=/home/runner/sycl-venv -DPython_FIND_REGISTRY:STRING=NEVER -DPython_INCLUDE_DIR:PATH=/opt/hostedtoolcache/Python/3.11.16/x64/include/python3.11 -DPython_NumPy_INCLUDE_DIRS:PATH=/home/runner/sycl-venv/lib/python3.11/site-packages/numpy/_core/include -DPython3_EXECUTABLE:PATH=/home/runner/sycl-venv/bin/python -DPython3_ROOT_DIR:PATH=/home/runner/sycl-venv -DPython3_FIND_REGISTRY:STRING=NEVER -DPython3_INCLUDE_DIR:PATH=/opt/hostedtoolcache/Python/3.11.16/x64/include/python3.11 -DPython3_NumPy_INCLUDE_DIRS:PATH=/home/runner/sycl-venv/lib/python3.11/site-packages/numpy/_core/include -DCMAKE_MAKE_PROGRAM:FILEPATH=/home/runner/sycl-venv/bin/ninja -DCMAKE_C_COMPILER:PATH=icx -DCMAKE_CXX_COMPILER:PATH=icpx -DDPCTL_ENABLE_L0_KERNEL_BUNDLE_CREATION=ON -DDPCTL_ENABLE_GLOG:BOOL=OFF -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE:STRING=Release
+
+The --no-warn-unused-cli option is deprecated.  Use -Wno-unused-cli instead.
+-- The CXX compiler identification is IntelLLVM 2026.1.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/intel/oneapi/compiler/2026.1/bin/icpx - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found IntelSYCL: /opt/intel/oneapi/compiler/2026.1/include (found version "202012")
+-- The C compiler identification is IntelLLVM 2026.1.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/intel/oneapi/compiler/2026.1/bin/icx - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Git: /usr/bin/git (found version "2.55.0")
+-- dpcpp ver[0]: Intel(R) oneAPI DPC++/C++ Compiler 2026.1.1 (2026.1.1.20260724)
+-- dpcpp ver[1]: Target: x86_64-unknown-linux-gnu
+-- dpcpp ver[2]: Thread model: posix
+-- dpcpp ver[3]: InstalledDir: /opt/intel/oneapi/compiler/2026.1/bin/compiler
+-- dpcpp ver[4]: Configuration file: /opt/intel/oneapi/compiler/2026.1/bin/compiler/../icpx.cfg
+-- Found IntelSyclCompiler: TRUE
+-- Level zero headers downloaded to: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-build/level-zero/include
+-- LIB_ZE: libze_loader.so.1
+-- LIB_CL: libOpenCL.so.1
+-- Performing Test DPCTL_IPC_MEMORY_HEADER_FOUND
+-- Performing Test DPCTL_IPC_MEMORY_HEADER_FOUND - Success
+-- SYCL IPC memory support: ENABLED (ipc_memory.hpp found)
+-- Found Python: /home/runner/sycl-venv/bin/python (found version "3.11.16") found components: Interpreter Development.Module
+-- pybind11 v3.1.0 
+-- Performing Test HAS_INTEL_IPO
+-- Performing Test HAS_INTEL_IPO - Success
+-- Found Python: /home/runner/sycl-venv/lib/python3.11/site-packages/numpy/_core/include (found version "3.11.16") found components: NumPy Interpreter Development.Module
+-- Found Cython: /home/runner/sycl-venv/bin/cython
+-- Configuring done (6.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-build
+[1/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_device_selector_interface.cpp.o
+[2/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_device_selection.cpp.o
+[3/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_service.cpp.o
+[4/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_context_interface.cpp.o
+[5/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_device_manager.cpp.o
+[6/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_device_interface.cpp.o
+[7/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_event_interface.cpp.o
+[8/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_extension_interface.cpp.o
+[9/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_kernel_interface.cpp.o
+[10/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_utils.cpp.o
+[11/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_platform_interface.cpp.o
+[12/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_platform_manager.cpp.o
+[13/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_kernel_bundle_interface.cpp.o
+[14/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_usm_interface.cpp.o
+[15/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_ipc_memory_interface.cpp.o
+[16/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/source/dpctl_sycl_queue_interface.cpp.o
+[17/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/helper/source/dpctl_error_handlers.cpp.o
+[18/54] Building CXX object libsyclinterface/CMakeFiles/DPCTLSyclInterface.dir/helper/source/dpctl_utils_helper.cpp.o
+[19/54] Linking CXX shared library libsyclinterface/libDPCTLSyclInterface.so
+[20/54] Generating CXX source dpctl/_diagnostics.cxx
+[21/54] Generating CXX source dpctl/_sycl_device_factory.cxx
+[22/54] Generating CXX source dpctl/_sycl_context.cxx
+[23/54] Generating CXX source dpctl/_sycl_platform.cxx
+[24/54] Generating CXX source dpctl/_sycl_event.cxx
+[25/54] Generating CXX source dpctl/_sycl_device.cxx
+[26/54] Generating CXX source dpctl/_sycl_queue_manager.cxx
+[27/54] Generating CXX source dpctl/compiler/_compiler.cxx
+[28/54] Building CXX object dpctl/CMakeFiles/_diagnostics.dir/_diagnostics.cxx.o
+[29/54] Generating CXX source dpctl/memory/_memory.cxx
+[30/54] Generating CXX source dpctl/_sycl_queue.cxx
+[31/54] Building CXX object dpctl/CMakeFiles/_sycl_context.dir/_sycl_context.cxx.o
+[32/54] Building CXX object dpctl/CMakeFiles/_sycl_event.dir/_sycl_event.cxx.o
+[33/54] Building CXX object dpctl/CMakeFiles/_sycl_device_factory.dir/_sycl_device_factory.cxx.o
+[34/54] Building CXX object dpctl/CMakeFiles/_sycl_platform.dir/_sycl_platform.cxx.o
+[35/54] Linking CXX shared module dpctl/_diagnostics.cpython-311-x86_64-linux-gnu.so
+[36/54] Linking CXX shared module dpctl/_sycl_context.cpython-311-x86_64-linux-gnu.so
+[37/54] Linking CXX shared module dpctl/_sycl_device_factory.cpython-311-x86_64-linux-gnu.so
+[38/54] Linking CXX shared module dpctl/_sycl_event.cpython-311-x86_64-linux-gnu.so
+[39/54] Linking CXX shared module dpctl/_sycl_platform.cpython-311-x86_64-linux-gnu.so
+[40/54] Building CXX object dpctl/CMakeFiles/_sycl_queue_manager.dir/_sycl_queue_manager.cxx.o
+[41/54] Linking CXX shared module dpctl/_sycl_queue_manager.cpython-311-x86_64-linux-gnu.so
+[42/54] Building CXX object dpctl/CMakeFiles/_sycl_device.dir/_sycl_device.cxx.o
+[43/54] Linking CXX shared module dpctl/_sycl_device.cpython-311-x86_64-linux-gnu.so
+[44/54] Building CXX object dpctl/compiler/CMakeFiles/_compiler.dir/_compiler.cxx.o
+[45/54] Linking CXX shared module dpctl/compiler/_compiler.cpython-311-x86_64-linux-gnu.so
+[46/54] Building CXX object dpctl/utils/CMakeFiles/_device_queries.dir/src/device_queries.cpp.o
+[47/54] Building CXX object dpctl/utils/CMakeFiles/_seq_order_keeper.dir/src/order_keeper.cpp.o
+[48/54] Building CXX object dpctl/memory/CMakeFiles/_memory.dir/_memory.cxx.o
+[49/54] Linking CXX shared module dpctl/memory/_memory.cpython-311-x86_64-linux-gnu.so
+[50/54] Building CXX object dpctl/CMakeFiles/_sycl_queue.dir/_sycl_queue.cxx.o
+[51/54] Linking CXX shared module dpctl/_sycl_queue.cpython-311-x86_64-linux-gnu.so
+[52/54] Linking CXX shared module dpctl/utils/_device_queries.cpython-311-x86_64-linux-gnu.so
+[53/54] Linking CXX shared module dpctl/utils/_seq_order_keeper.cpython-311-x86_64-linux-gnu.so
+[53/54] Install the project...
+-- Install configuration: "Release"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/libDPCTLSyclInterface.so
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_platform_manager.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_utils.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_device_manager.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_enum_types.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_vector.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_type_casters.hpp
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Support
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Support/MemOwnershipAttrs.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Support/ExternC.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Support/DllExport.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_kernel_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_ipc_memory_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_device_selection.hpp
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_platform_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_event_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_device_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_types.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_service.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_queue_manager.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_data_types.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_error_handler_type.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_device_selector_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_kernel_bundle_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_context_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Config
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Config/dpctl_config.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_usm_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_queue_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_extension_interface.h
+-- Up-to-date: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl_sycl_interface.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl4pybind11.hpp
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl_capi.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_diagnostics.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_diagnostics.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_context.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_context.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_context_api.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_context.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_device.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_device.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_device_api.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_device.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_device_factory.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_device_factory.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_event.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_event.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_event_api.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_event.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_platform.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_platform.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_queue_manager.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_queue_manager.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_queue.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_queue.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_queue_api.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_queue.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/compiler/_compiler.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/compiler/_compiler.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN/.."
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/compiler/_compiler_api.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/compiler/_compiler.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/memory/_memory.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/memory/_memory.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN/.."
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/memory/_memory_api.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/memory/_memory.h
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/utils/_device_queries.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/utils/_device_queries.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/utils/_seq_order_keeper.cpython-311-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/utils/_seq_order_keeper.cpython-311-x86_64-linux-gnu.so" to "$ORIGIN"
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/resources/cmake/IntelSYCLConfig.cmake
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/dpctl/resources/cmake/dpctl-config.cmake
+-- Installing: /home/runner/dpctl/_skbuild/linux-x86_64-3.11/cmake-install/lib/cmake/dpctl/dpctl-config.cmake
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/libDPCTLSyclInterface.so -> dpctl/libDPCTLSyclInterface.so
+creating directory dpctl/include/syclinterface
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_platform_manager.h -> dpctl/include/syclinterface/dpctl_sycl_platform_manager.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_utils.h -> dpctl/include/syclinterface/dpctl_utils.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_device_manager.h -> dpctl/include/syclinterface/dpctl_sycl_device_manager.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_enum_types.h -> dpctl/include/syclinterface/dpctl_sycl_enum_types.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_vector.h -> dpctl/include/syclinterface/dpctl_vector.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_type_casters.hpp -> dpctl/include/syclinterface/dpctl_sycl_type_casters.hpp
+creating directory dpctl/include/syclinterface/Support
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Support/MemOwnershipAttrs.h -> dpctl/include/syclinterface/Support/MemOwnershipAttrs.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Support/ExternC.h -> dpctl/include/syclinterface/Support/ExternC.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Support/DllExport.h -> dpctl/include/syclinterface/Support/DllExport.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_kernel_interface.h -> dpctl/include/syclinterface/dpctl_sycl_kernel_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_ipc_memory_interface.h -> dpctl/include/syclinterface/dpctl_sycl_ipc_memory_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_device_selection.hpp -> dpctl/include/syclinterface/dpctl_device_selection.hpp
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_platform_interface.h -> dpctl/include/syclinterface/dpctl_sycl_platform_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_event_interface.h -> dpctl/include/syclinterface/dpctl_sycl_event_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_device_interface.h -> dpctl/include/syclinterface/dpctl_sycl_device_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_types.h -> dpctl/include/syclinterface/dpctl_sycl_types.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_service.h -> dpctl/include/syclinterface/dpctl_service.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_queue_manager.h -> dpctl/include/syclinterface/dpctl_sycl_queue_manager.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_data_types.h -> dpctl/include/syclinterface/dpctl_data_types.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_error_handler_type.h -> dpctl/include/syclinterface/dpctl_error_handler_type.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_device_selector_interface.h -> dpctl/include/syclinterface/dpctl_sycl_device_selector_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_kernel_bundle_interface.h -> dpctl/include/syclinterface/dpctl_sycl_kernel_bundle_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_context_interface.h -> dpctl/include/syclinterface/dpctl_sycl_context_interface.h
+creating directory dpctl/include/syclinterface/Config
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/Config/dpctl_config.h -> dpctl/include/syclinterface/Config/dpctl_config.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_usm_interface.h -> dpctl/include/syclinterface/dpctl_sycl_usm_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_queue_interface.h -> dpctl/include/syclinterface/dpctl_sycl_queue_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/syclinterface/dpctl_sycl_extension_interface.h -> dpctl/include/syclinterface/dpctl_sycl_extension_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl_sycl_interface.h -> dpctl/include/dpctl_sycl_interface.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl4pybind11.hpp -> dpctl/include/dpctl4pybind11.hpp
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl_capi.h -> dpctl/include/dpctl_capi.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_diagnostics.cpython-311-x86_64-linux-gnu.so -> dpctl/_diagnostics.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_context.cpython-311-x86_64-linux-gnu.so -> dpctl/_sycl_context.cpython-311-x86_64-linux-gnu.so
+creating directory dpctl/include/dpctl
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_context_api.h -> dpctl/include/dpctl/_sycl_context_api.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_context.h -> dpctl/include/dpctl/_sycl_context.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_device.cpython-311-x86_64-linux-gnu.so -> dpctl/_sycl_device.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_device_api.h -> dpctl/include/dpctl/_sycl_device_api.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_device.h -> dpctl/include/dpctl/_sycl_device.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_device_factory.cpython-311-x86_64-linux-gnu.so -> dpctl/_sycl_device_factory.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_event.cpython-311-x86_64-linux-gnu.so -> dpctl/_sycl_event.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_event_api.h -> dpctl/include/dpctl/_sycl_event_api.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_event.h -> dpctl/include/dpctl/_sycl_event.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_platform.cpython-311-x86_64-linux-gnu.so -> dpctl/_sycl_platform.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_queue_manager.cpython-311-x86_64-linux-gnu.so -> dpctl/_sycl_queue_manager.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/_sycl_queue.cpython-311-x86_64-linux-gnu.so -> dpctl/_sycl_queue.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_queue_api.h -> dpctl/include/dpctl/_sycl_queue_api.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/_sycl_queue.h -> dpctl/include/dpctl/_sycl_queue.h
+creating directory dpctl/include/dpctl/compiler
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/compiler/_compiler_api.h -> dpctl/include/dpctl/compiler/_compiler_api.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/compiler/_compiler.h -> dpctl/include/dpctl/compiler/_compiler.h
+creating directory dpctl/include/dpctl/memory
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/memory/_memory_api.h -> dpctl/include/dpctl/memory/_memory_api.h
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/include/dpctl/memory/_memory.h -> dpctl/include/dpctl/memory/_memory.h
+creating directory dpctl/resources/cmake
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/resources/cmake/IntelSYCLConfig.cmake -> dpctl/resources/cmake/IntelSYCLConfig.cmake
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/resources/cmake/dpctl-config.cmake -> dpctl/resources/cmake/dpctl-config.cmake
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/compiler/_compiler.cpython-311-x86_64-linux-gnu.so -> dpctl/compiler/_compiler.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/memory/_memory.cpython-311-x86_64-linux-gnu.so -> dpctl/memory/_memory.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/utils/_device_queries.cpython-311-x86_64-linux-gnu.so -> dpctl/utils/_device_queries.cpython-311-x86_64-linux-gnu.so
+copying _skbuild/linux-x86_64-3.11/cmake-install/dpctl/utils/_seq_order_keeper.cpython-311-x86_64-linux-gnu.so -> dpctl/utils/_seq_order_keeper.cpython-311-x86_64-linux-gnu.so
+
+/home/runner/sycl-venv/lib/python3.11/site-packages/setuptools/dist.py:334: InformationOnly: Normalizing '0.23.0dev0+381.gf039637a9' to '0.23.0.dev0+381.gf039637a9'
+  self.metadata.version = self._normalize_version(self.metadata.version)
+running build_ext
+Obtaining file:///home/runner/dpctl
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy>=2.0.0 in /home/runner/sycl-venv/lib/python3.11/site-packages (from dpctl==0.23.0.dev0+381.gf039637a9) (2.4.6)
+Building wheels for collected packages: dpctl
+  Building editable for dpctl (pyproject.toml): started
+  Building editable for dpctl (pyproject.toml): finished with status 'done'
+  Created wheel for dpctl: filename=dpctl-0.23.0.dev0+381.gf039637a9-0.editable-py3-none-any.whl size=9874 sha256=61fe5b8e55ce32fa3a371835b790302f8fb73a87d3352addc940a1122939bdab
+  Stored in directory: /tmp/pip-ephem-wheel-cache-75l5hoiw/wheels/53/d2/e8/55569e415e0ce5a220f6c03da7f0279bd5f2bd7eeb65accf76
+Successfully built dpctl
+Installing collected packages: dpctl
+Successfully installed dpctl-0.23.0.dev0+381.gf039637a9
+[build_locally] Using CMake args:
+-DCMAKE_C_COMPILER:PATH=icx -DCMAKE_CXX_COMPILER:PATH=icpx -DDPCTL_ENABLE_L0_KERNEL_BUNDLE_CREATION=ON -DDPCTL_ENABLE_GLOG:BOOL=OFF -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
+[build_locally] Building extensions in-place...
++ /home/runner/sycl-venv/bin/python setup.py build_ext --inplace --generator=Ninja --build-type=Release -- -DCMAKE_C_COMPILER:PATH=icx -DCMAKE_CXX_COMPILER:PATH=icpx -DDPCTL_ENABLE_L0_KERNEL_BUNDLE_CREATION=ON -DDPCTL_ENABLE_GLOG:BOOL=OFF -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
++ /home/runner/sycl-venv/bin/python -m pip install -e . --no-build-isolation
+[build_locally] Build complete
+Processing ./.
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: dpctl
+  Building wheel for dpctl (pyproject.toml): started
+  Building wheel for dpctl (pyproject.toml): finished with status 'done'
+  Created wheel for dpctl: filename=dpctl-0.23.0.dev0+381.gf039637a9-cp311-cp311-linux_x86_64.whl size=1505201 sha256=e98e92635a8fa96e1204ab030d102adad3d42e0117b3e2b23789dd2c46bc50bf
+  Stored in directory: /tmp/pip-ephem-wheel-cache-m9h5ikhk/wheels/53/d2/e8/55569e415e0ce5a220f6c03da7f0279bd5f2bd7eeb65accf76
+Successfully built dpctl
+Installing collected packages: dpctl
+  Attempting uninstall: dpctl
+    Found existing installation: dpctl 0.23.0.dev0+381.gf039637a9
+    Uninstalling dpctl-0.23.0.dev0+381.gf039637a9:
+      Successfully uninstalled dpctl-0.23.0.dev0+381.gf039637a9
+Successfully installed dpctl-0.23.0.dev0+381.gf039637a9
+dpctl OK 0.23.0dev0+381.gf039637a9
