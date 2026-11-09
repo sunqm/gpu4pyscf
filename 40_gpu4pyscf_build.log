@@ -1,0 +1,1200 @@
+  212 |                    double& v2sigmalapl_ab_b, double& v2sigmalapl_bb_a, double& v2sigmalapl_bb_b,
+      |                            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:212:54: warning: unused parameter 'v2sigmalapl_bb_a' [-Wunused-parameter]
+  212 |                    double& v2sigmalapl_ab_b, double& v2sigmalapl_bb_a, double& v2sigmalapl_bb_b,
+      |                                                      ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:212:80: warning: unused parameter 'v2sigmalapl_bb_b' [-Wunused-parameter]
+  212 |                    double& v2sigmalapl_ab_b, double& v2sigmalapl_bb_a, double& v2sigmalapl_bb_b,
+      |                                                                                ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:213:28: warning: unused parameter 'v2sigmatau_aa_a' [-Wunused-parameter]
+  213 |                    double& v2sigmatau_aa_a, double& v2sigmatau_aa_b, double& v2sigmatau_ab_a, 
+      |                            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:213:53: warning: unused parameter 'v2sigmatau_aa_b' [-Wunused-parameter]
+  213 |                    double& v2sigmatau_aa_a, double& v2sigmatau_aa_b, double& v2sigmatau_ab_a, 
+      |                                                     ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:213:78: warning: unused parameter 'v2sigmatau_ab_a' [-Wunused-parameter]
+  213 |                    double& v2sigmatau_aa_a, double& v2sigmatau_aa_b, double& v2sigmatau_ab_a, 
+      |                                                                              ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:214:28: warning: unused parameter 'v2sigmatau_ab_b' [-Wunused-parameter]
+  214 |                    double& v2sigmatau_ab_b, double& v2sigmatau_bb_a, double& v2sigmatau_bb_b,
+      |                            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:214:53: warning: unused parameter 'v2sigmatau_bb_a' [-Wunused-parameter]
+  214 |                    double& v2sigmatau_ab_b, double& v2sigmatau_bb_a, double& v2sigmatau_bb_b,
+      |                                                     ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:214:78: warning: unused parameter 'v2sigmatau_bb_b' [-Wunused-parameter]
+  214 |                    double& v2sigmatau_ab_b, double& v2sigmatau_bb_a, double& v2sigmatau_bb_b,
+      |                                                                              ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:215:28: warning: unused parameter 'v2lapl2_aa' [-Wunused-parameter]
+  215 |                    double& v2lapl2_aa, double& v2lapl2_ab, double& v2lapl2_bb,
+      |                            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:215:48: warning: unused parameter 'v2lapl2_ab' [-Wunused-parameter]
+  215 |                    double& v2lapl2_aa, double& v2lapl2_ab, double& v2lapl2_bb,
+      |                                                ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:215:68: warning: unused parameter 'v2lapl2_bb' [-Wunused-parameter]
+  215 |                    double& v2lapl2_aa, double& v2lapl2_ab, double& v2lapl2_bb,
+      |                                                                    ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:216:28: warning: unused parameter 'v2lapltau_a_a' [-Wunused-parameter]
+  216 |                    double& v2lapltau_a_a, double& v2lapltau_a_b, double& v2lapltau_b_a, double& v2lapltau_b_b,
+      |                            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:216:51: warning: unused parameter 'v2lapltau_a_b' [-Wunused-parameter]
+  216 |                    double& v2lapltau_a_a, double& v2lapltau_a_b, double& v2lapltau_b_a, double& v2lapltau_b_b,
+      |                                                   ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:216:74: warning: unused parameter 'v2lapltau_b_a' [-Wunused-parameter]
+  216 |                    double& v2lapltau_a_a, double& v2lapltau_a_b, double& v2lapltau_b_a, double& v2lapltau_b_b,
+      |                                                                          ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:216:97: warning: unused parameter 'v2lapltau_b_b' [-Wunused-parameter]
+  216 |                    double& v2lapltau_a_a, double& v2lapltau_a_b, double& v2lapltau_b_a, double& v2lapltau_b_b,
+      |                                                                                                 ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:217:28: warning: unused parameter 'v2tau2_aa' [-Wunused-parameter]
+  217 |                    double& v2tau2_aa, double& v2tau2_ab, double& v2tau2_bb ) {
+      |                            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:217:47: warning: unused parameter 'v2tau2_ab' [-Wunused-parameter]
+  217 |                    double& v2tau2_aa, double& v2tau2_ab, double& v2tau2_bb ) {
+      |                                               ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/build/temp.linux-x86_64/gpu4pyscf/deps/src/ExchCXX/include/exchcxx/impl/builtin/kernels/deorbitalized.hpp:217:66: warning: unused parameter 'v2tau2_bb' [-Wunused-parameter]
+  217 |                    double& v2tau2_aa, double& v2tau2_ab, double& v2tau2_bb ) {
+      |                                                                  ^
+149 warnings generated.
+149 warnings generated.
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/onemkl_helper/onemkl_lapack.cpp:169:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  169 | }
+      | ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/onemkl_helper/onemkl_lapack.cpp:181:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  181 | }
+      | ^
+2 warnings generated.
+[ 14%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libonemkl_helper.so
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+[ 14%] Building CXX object cupy_helper/CMakeFiles/cupy_helper.dir/block_diag.cu.o
+[ 14%] Built target onemkl_helper
+[ 15%] Building Fortran object solvent/CMakeFiles/solvent.dir/mnsol_interface.f90.o
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+[ 15%] Building Fortran object solvent/CMakeFiles/solvent.dir/mnsol_mem.F.o
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+[ 16%] Building Fortran object solvent/CMakeFiles/solvent.dir/mnsol.F.o
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/ss_kernel.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/ss_kernel.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+[ 16%] Building CXX object sem/CMakeFiles/sem.dir/eri_1c2e_kernel.cu.o
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+[ 17%] Building CXX object gint/CMakeFiles/gint.dir/constant.cu.o
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10157: ignoring option '-W'; argument is of wrong type
+ifx: command line warning #10006: ignoring unknown option '-fno-system-debug'
+ifx: command line warning #10006: ignoring unknown option '-fsycl-default-sub-group-size=32'
+[ 18%] Building CXX object solvent/CMakeFiles/solvent.dir/pcm.cu.o
+[ 19%] Building CXX object cupy_helper/CMakeFiles/cupy_helper.dir/unpack.cu.o
+[ 20%] Building CXX object cupy_helper/CMakeFiles/cupy_helper.dir/take_last2d.cu.o
+[ 21%] Building CXX object gint/CMakeFiles/gint.dir/nr_fill_ao_int3c1e.cu.o
+[ 21%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/rys_jk_driver.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/eri_1c2e_kernel.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/eri_1c2e_kernel.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+[ 22%] Building CXX object sem/CMakeFiles/sem.dir/eri_2c2e_kernel.cu.o
+[ 23%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libsolvent.so
+[ 24%] Building CXX object gint/CMakeFiles/gint.dir/nr_fill_ao_int3c1e_ip.cu.o
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+/home/runner/micromamba/envs/sycl-ci/bin/icpx -fPIC -O3 -DNDEBUG -shared -fsycl -flink-huge-device-code -fsycl-device-code-split=per_kernel -fsycl-max-parallel-link-jobs=64 -Wl,--dependency-file=CMakeFiles/solvent.dir/link.d -Wl,-soname,libsolvent.so -o /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libsolvent.so CMakeFiles/solvent.dir/mnsol_interface.f90.o CMakeFiles/solvent.dir/mnsol_mem.F.o CMakeFiles/solvent.dir/mnsol.F.o CMakeFiles/solvent.dir/pcm.cu.o   -L/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/deps/lib  -L/usr/lib/gcc/x86_64-linux-gnu/13  -Wl,-rpath,"\$ORIGIN:\$ORIGIN/deps/lib:\$ORIGIN/deps/lib64" /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgsycl.so -lifport -lifcoremt -lipgo -lpthread
+[ 24%] Built target solvent
+[ 25%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/nr_sr_estimator.c.o
+[ 26%] Building CXX object sem/CMakeFiles/sem.dir/grad_kernel.cu.o
+[ 27%] Building CXX object cupy_helper/CMakeFiles/cupy_helper.dir/async_d2h_2d.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/eri_2c2e_kernel.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/eri_2c2e_kernel.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+[ 27%] Building CXX object gint/CMakeFiles/gint.dir/nr_fill_ao_int3c1e_ipip.cu.o
+[ 28%] Building CXX object gint/CMakeFiles/gint.dir/nr_fill_ao_int3c2e.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/nr_sr_estimator.c:5:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/vhf.cuh:10:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/gpu_compat.h:32:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/nr_sr_estimator.c:5:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/vhf.cuh:10:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/gpu_compat.h:32:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+[ 29%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/nr_sr_estimator.cu.o
+[ 29%] Building CXX object cupy_helper/CMakeFiles/cupy_helper.dir/add_sparse.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/grad_kernel.cu:19:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/sem/grad_kernel.cu:19:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda_runtime.h:5:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+[ 30%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libsem.so
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+/home/runner/micromamba/envs/sycl-ci/bin/icpx -fPIC -O3 -DNDEBUG -shared -fsycl -flink-huge-device-code -fsycl-device-code-split=per_kernel -fsycl-max-parallel-link-jobs=64 -Wl,--dependency-file=CMakeFiles/sem.dir/link.d -Wl,-soname,libsem.so -o /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libsem.so CMakeFiles/sem.dir/ss_kernel.cu.o CMakeFiles/sem.dir/fock.cu.o CMakeFiles/sem.dir/eri_1c2e_kernel.cu.o CMakeFiles/sem.dir/eri_2c2e_kernel.cu.o CMakeFiles/sem.dir/grad_kernel.cu.o   -L/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/deps/lib  -Wl,-rpath,"\$ORIGIN:\$ORIGIN/deps/lib:\$ORIGIN/deps/lib64" /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgsycl.so
+[ 30%] Built target sem
+[ 30%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/md_contract_j.cu.o
+[ 31%] Building CXX object gint/CMakeFiles/gint.dir/j_engine_matrix_reorder.c.o
+[ 32%] Building CXX object gint/CMakeFiles/gint.dir/cart2sph.cu.o
+[ 33%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/rys_contract_j.cu.o
+[ 34%] Building CXX object pbc/CMakeFiles/pbc.dir/ft_ao.cu.o
+[ 35%] Building CXX object cupy_helper/CMakeFiles/cupy_helper.dir/dist_matrix.cu.o
+[ 36%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/unrolled_md_j.cu.o
+[ 37%] Building CXX object cupy_helper/CMakeFiles/cupy_helper.dir/cart2sph.cu.o
+[ 38%] Building CXX object pbc/CMakeFiles/pbc.dir/ft_ao_ip1.cu.o
+[ 38%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/cart2xyz.c.o
+[ 39%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/rys_contract_k.cu.o
+[ 40%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/unrolled_md_j_4dm.cu.o
+[ 40%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgint.so
+[ 41%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libcupy_helper.so
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+[ 41%] Built target cupy_helper
+[ 41%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/screen.cu.o
+[ 42%] Building CXX object pbc/CMakeFiles/pbc.dir/contract_ft_ao.cu.o
+[ 43%] Building CXX object pbc/CMakeFiles/pbc.dir/fill_int3c2e.cu.o
+[ 44%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/unrolled_rys_k.cu.o
+[ 45%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/md_j_driver.cu.o
+149 warnings generated.
+[ 46%] Building CXX object ecp/CMakeFiles/gecp.dir/nr_ecp_driver.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/constant_objects.cuh:20:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda.h:3:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:43:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   43 | __device__ inline
+      |            ^
+8 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:21:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/constant_objects.cuh:20:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/cuda.h:3:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/screen.cu:43:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   43 | __device__ inline
+      |            ^
+8 warnings generated.
+[ 47%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/drivers.cu.o
+[ 47%] Building CXX object pbc/CMakeFiles/pbc.dir/contract_int3c2e.cu.o
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+[ 47%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/md_pairdata.c.o
+[ 48%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/rys_contract_jk.cu.o
+[ 49%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/eval_density_v2.cu.o
+/home/runner/micromamba/envs/sycl-ci/bin/icpx -fPIC -O3 -DNDEBUG -shared -fsycl -flink-huge-device-code -fsycl-device-code-split=per_kernel -fsycl-max-parallel-link-jobs=64 -Wl,--dependency-file=CMakeFiles/gint.dir/link.d -Wl,-soname,libgint.so -o /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgint.so CMakeFiles/gint.dir/g2e.c.o CMakeFiles/gint.dir/pair_data.c.o CMakeFiles/gint.dir/bpcache.cu.o CMakeFiles/gint.dir/constant.cu.o CMakeFiles/gint.dir/nr_fill_ao_int3c1e.cu.o CMakeFiles/gint.dir/nr_fill_ao_int3c1e_ip.cu.o CMakeFiles/gint.dir/nr_fill_ao_int3c1e_ipip.cu.o CMakeFiles/gint.dir/nr_fill_ao_int3c2e.cu.o CMakeFiles/gint.dir/j_engine_matrix_reorder.c.o CMakeFiles/gint.dir/cart2sph.cu.o   -L/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/deps/lib  -Wl,-rpath,"\$ORIGIN:\$ORIGIN/deps/lib:\$ORIGIN/deps/lib64" /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgsycl.so
+[ 49%] Built target gint
+[ 50%] Building CXX object gvhf/CMakeFiles/gvhf.dir/constant.cu.o
+[ 51%] Building CXX object pbc/CMakeFiles/pbc.dir/ejk_int3c2e_ip1.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-md/md_pairdata.c:3:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/vhf.cuh:10:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/gpu_compat.h:32:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-md/md_pairdata.c:3:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/vhf.cuh:10:
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/gpu_compat.h:32:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:136:9: warning: 'NAN' macro redefined [-Wmacro-redefined]
+  136 | #define NAN std::numeric_limits<float>::quiet_NaN()
+      |         ^
+/usr/include/math.h:98:11: note: previous definition is here
+   98 | #  define NAN (__builtin_nanf (""))
+      |           ^
+1 warning generated.
+[ 52%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/contract_int3c2e.cu.o
+[ 53%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/unrolled_rys_jk.cu.o
+[ 54%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgvhf.so
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+[ 54%] Built target gvhf
+[ 55%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/eval_tau_v2.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_density_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+[ 56%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/eval_lda_mat_v2.cu.o
+[ 57%] Building CXX object pbc/CMakeFiles/pbc.dir/fill_int2c2e.cu.o
+[ 58%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/pbc_md_contract_j.cu.o
+[ 59%] Building CXX object pbc/CMakeFiles/pbc.dir/fill_int2c2e_ip1.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_mat_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+[ 60%] Building CXX object gvhf-md/CMakeFiles/gvhf_md.dir/contract_Et.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_tau_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+[ 60%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/eval_mgga_mat_v2.cu.o
+[ 60%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/rys_contract_jk_ip1.cu.o
+[ 61%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgecp.so
+[ 61%] Building CXX object pbc/CMakeFiles/pbc.dir/e_int2c2e_ip1.cu.o
+[ 62%] Linking CXX shared library /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/libgvhf_md.so
+[ 63%] Building CXX object pbc/CMakeFiles/pbc.dir/contract_int3c2e_pvp.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_mat_v2.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+[ 64%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/eval_lda_strain_grad.cu.o
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+llvm-foreach: adjusted number of threads to 4 (max safe available).
+[ 64%] Built target gvhf_md
+[ 65%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/unrolled_rys_jk_ip1.cu.o
+[ 65%] Built target gecp
+[ 66%] Building CXX object pbc/CMakeFiles/pbc.dir/overlap.cu.o
+[ 67%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/unrolled_ejk_ip1.cu.o
+[ 68%] Building CXX object pbc/CMakeFiles/pbc.dir/ppnl.cu.o
+[ 69%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/eval_mgga_strain_grad.cu.o
+[ 70%] Building CXX object pbc/CMakeFiles/pbc.dir/supmol_sr_estimator.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_lda_strain_grad.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+[ 71%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/aft_eval_density.cu.o
+[ 72%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/rys_contract_jk_ip2.cu.o
+[ 72%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/aft_eval_tau.cu.o
+[ 73%] Building CXX object gvhf-rys/CMakeFiles/gvhf_rys.dir/unrolled_ejk_ip2_type12.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:30:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   30 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:85:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   85 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/cartesian.cuh:367:27: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  367 | template <int ANG> inline __device__
+      |                           ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/eval_mgga_strain_grad.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+6 warnings generated.
+[ 74%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/aft_eval_lda_mat.cu.o
+[ 74%] Building CXX object pbc/CMakeFiles/pbc.dir/rys_contract_k.cu.o
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:31:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   31 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:37:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   37 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:44:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   44 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:67:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   67 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:106:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  106 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:133:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  133 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:160:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  160 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:190:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  190 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:209:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  209 | __device__ inline
+      |            ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:89:34: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   89 | template <int LI, int LJ> inline __device__
+      |                                  ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:156:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  156 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:168:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  168 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:192:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  192 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:220:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  220 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+17 warnings generated.
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:22:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:31:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   31 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:37:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   37 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:44:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   44 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:67:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   67 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:106:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  106 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:133:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  133 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:160:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  160 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:190:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  190 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gvhf-rys/rys_contract_k.cuh:209:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  209 | __device__ inline
+      |            ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:23:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:24:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   24 | __device__ inline
+      |            ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/utils.cuh:33:12: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   33 | __device__ inline
+      |            ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:19:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   19 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:89:34: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+   89 | template <int LI, int LJ> inline __device__
+      |                                  ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:156:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  156 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:168:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  168 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:192:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  192 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+In file included from /home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_eval_density.cu:24:
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multigrid/multigrid_v3/aft_recursion.cuh:220:8: warning: duplicate 'inline' declaration specifier [-Wduplicate-decl-specifier]
+  220 | inline __device__
+      |        ^
+/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/gsycl/sycl_device.hpp:97:20: note: expanded from macro '__device__'
+   97 | #define __device__ GPU4PYSCF_DEVICE_ATTR
+      |                    ^
+<command line>:2:31: note: expanded from macro 'GPU4PYSCF_DEVICE_ATTR'
+    2 | #define GPU4PYSCF_DEVICE_ATTR inline __attribute__((always_inline))
+      |                               ^
+17 warnings generated.
+[ 75%] Building CXX object multigrid/CMakeFiles/mgrid_v3.dir/multigrid_v3/aft_eval_mgga_mat.cu.o
