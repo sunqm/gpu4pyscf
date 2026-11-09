@@ -44,13 +44,13 @@ static const double _factorial2[] = {
     NAN,
 };
 
-__device__ __forceinline__
+__device__ inline
 static double factorial2(int n){
     return (n < 0) ? 1.0 : _factorial2[n];
 }
 
 
-__device__ __forceinline__
+__device__ inline
 static double int_unit_xyz(const int i, const int j, const int k){
     // i % 2 and j % 2 and k % 2
     const int even = 1 - (((i & 1) | (j & 1)) | (k & 1));

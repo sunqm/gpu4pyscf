@@ -18,7 +18,7 @@
 
 #include "gvhf-rys/rys_roots.cu"
 
-__device__ __forceinline__
+__device__ inline
 void rys_roots_for_k(int nroots, double theta, double rr, double *rw,
                      double omega, double lr_factor, double sr_factor,
                      int block_size, int stride, int rt_id)
@@ -59,7 +59,7 @@ void rys_roots_for_k(int nroots, double theta, double rr, double *rw,
     }
 }
 
-__device__ __forceinline__
+__device__ inline
 void rys_roots_for_k(int nroots, double theta, double rr, double *rw,
                      double omega, double lr_factor, double sr_factor)
 {

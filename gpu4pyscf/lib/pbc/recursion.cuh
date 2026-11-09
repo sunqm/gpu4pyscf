@@ -16,7 +16,7 @@
 
 #pragma once
 
-__forceinline__ __device__
+inline __device__
 void vrr(double *gx, double *Rpq, double ai, double aj, double rt,
          int li, int lj, int gout_id, int gout_stride, int nsp_per_block)
 {

@@ -21,7 +21,7 @@
     ao_pair_offset, aux_offset, nauxbas, naux, to_sph, thread_id, worker_id, shared_memory)
 
 
-__device__ __forceinline__
+__device__ inline
 void int3c2e_000(KERNEL_ARGS)
 {
     int st_id = thread_id;
@@ -121,7 +121,7 @@ void int3c2e_000(KERNEL_ARGS)
     }
 }
 
-__device__ __forceinline__
+__device__ inline
 void int3c2e_100(KERNEL_ARGS)
 {
     int st_id = thread_id;
@@ -232,7 +232,7 @@ void int3c2e_100(KERNEL_ARGS)
     }
 }
 
-__device__ __forceinline__
+__device__ inline
 void int3c2e_110(KERNEL_ARGS)
 {
     int st_id = thread_id;
@@ -359,7 +359,7 @@ void int3c2e_110(KERNEL_ARGS)
     }
 }
 
-__device__ __forceinline__
+__device__ inline
 void int3c2e_001(KERNEL_ARGS)
 {
     int st_id = thread_id;
@@ -470,7 +470,7 @@ void int3c2e_001(KERNEL_ARGS)
     }
 }
 
-__device__ __forceinline__
+__device__ inline
 void int3c2e_101(KERNEL_ARGS)
 {
     int st_id = thread_id;

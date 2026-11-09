@@ -24,7 +24,7 @@
 
 #define NSP_PER_BLOCK   8
 
-__device__ __forceinline__
+__device__ inline
 void multiply(double aR, double aI, double bR, double bI, double &cR, double &cI)
 {
     double outR = aR * bR - aI * bI;

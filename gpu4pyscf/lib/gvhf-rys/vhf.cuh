@@ -148,7 +148,7 @@ typedef struct {
 } Fold3Index;
 
 #ifdef __CUDACC__
-__device__ __forceinline__ unsigned get_smid()
+__device__ inline unsigned get_smid()
 {
     unsigned smid;
     asm volatile("mov.u32 %0, %%smid;" : "=r"(smid));

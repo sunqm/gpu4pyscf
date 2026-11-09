@@ -150,7 +150,7 @@ void block_reduce(double val, double *d_out) {
     __syncthreads();
 }
 
-__device__ __forceinline__
+__device__ inline
 void set_shared_memory(double *smem, const int size) {
     setup_context();
     for (int i = threadIdx_x; i < size; i += blockDim_x) {

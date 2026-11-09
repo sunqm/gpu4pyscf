@@ -16,7 +16,7 @@
 
 #pragma once
 
-__forceinline__ __device__
+inline __device__
 void rename_registers(double i_cartesian[], int start, int stop, int count)
 {
     if (start > 0) {
@@ -27,7 +27,7 @@ void rename_registers(double i_cartesian[], int start, int stop, int count)
     }
 }
 
-template <int ANG> __forceinline__ __device__
+template <int ANG> inline __device__
 void gto_cartesian(double values[], double fx, double fy, double fz)
 {
     if constexpr (ANG == 0) {
@@ -82,7 +82,7 @@ void gto_cartesian(double values[], double fx, double fy, double fz)
     }
 }
 
-template <int ANG> __forceinline__ __device__
+template <int ANG> inline __device__
 void gto_deriv1(double gradient_values[], double original_values[],
                 double fx, double fy, double fz, double exponent)
 {
@@ -364,7 +364,7 @@ void gto_deriv1(double gradient_values[], double original_values[],
     }
 }
 
-template <int ANG> __forceinline__ __device__
+template <int ANG> inline __device__
 void gto_deriv2(double output[], double x, double y, double z, double exponent)
 {
     // Output in (derivative, orbital)

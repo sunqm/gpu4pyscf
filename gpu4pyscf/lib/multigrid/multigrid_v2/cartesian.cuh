@@ -19,7 +19,7 @@
 namespace gpu4pyscf::gpbc::multi_grid {
 
 template <typename T, int ANG>
-__forceinline__ __device__ void gto_cartesian(T values[], const T fx,
+inline __device__ void gto_cartesian(T values[], const T fx,
                                               const T fy, const T fz) {
   if constexpr (ANG == 0) {
     values[0] = 1;
@@ -66,7 +66,7 @@ __forceinline__ __device__ void gto_cartesian(T values[], const T fx,
 
 namespace gradient {
 template <typename T, int ANG>
-__forceinline__ __device__ void
+inline __device__ void
 gto_cartesian(T gradient_values[], const T original_values[], const T fx,
               const T fy, const T fz, const T exponent) {
   const T minus_2afx = -2 * exponent * fx;
@@ -349,7 +349,7 @@ gto_cartesian(T gradient_values[], const T original_values[], const T fx,
 
 namespace second_derivative {
 template <typename T, int ANG>
-__forceinline__ __device__ void
+inline __device__ void
 gto_cartesian(T output[], const T x, const T y, const T z, const T exponent) {
   // Output in (derivative, orbital)
   // Where derivative in the order of xx, xy, xz, yy, yz, zz

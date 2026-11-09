@@ -21,7 +21,7 @@ __host__ __device__ T distance_squared(const T x, const T y, const T z) {
   return x * x + y * y + z * z;
 }
 
-__device__ __forceinline__
+__device__ inline
 void multiply(double aR, double aI, double bR, double bI, double &cR, double &cI)
 {
     double outR = aR * bR - aI * bI;
@@ -30,7 +30,7 @@ void multiply(double aR, double aI, double bR, double bI, double &cR, double &cI
     cI = outI;
 }
 
-__device__ __forceinline__
+__device__ inline
 double reduce(double val, double *swap, int thread_id)
 {
     setup_context();

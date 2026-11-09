@@ -28,20 +28,20 @@
     int gout_stride = blockDim_y;
 
 
-__device__ __forceinline__
+__device__ inline
 int lex_xyz_offset(int l) {
     // the offsets for _c_cartesian_lexical_xyz = l*(l+1)*(l+2)/6 * 3
     return l*(l+1)*(l+2) / 2;
 }
 
-__device__ __forceinline__
+__device__ inline
 int lex_xyz_address(int l, int i)
 {
     return _c_cartesian_lexical_xyz[lex_xyz_offset(l) + i];
 }
 
 template <int LIJ>
-__device__ __forceinline__
+__device__ inline
 void vrr(double *g, double *ri, double *rj, double *Rpq, double aj_aij, double rt_aij,
          double b10, int g_size)
 {
@@ -64,7 +64,7 @@ void vrr(double *g, double *ri, double *rj, double *Rpq, double aj_aij, double r
 }
 
 template <int LKL>
-__device__ __forceinline__
+__device__ inline
 void trr(double *g, double *rlrk, double *Rpq, double al_akl, double rt_akl,
          double b00, double b01, int lij3, int stride_k, int g_size)
 {
@@ -103,7 +103,7 @@ void trr(double *g, double *rlrk, double *Rpq, double al_akl, double rt_akl,
 }
 
 template <int LI, int LJ>
-__device__ __forceinline__
+__device__ inline
 void hrr_ij(double *g, double *rjri, int count, int g_size)
 {
     SETUP_GOUT_KERNEL();
@@ -130,7 +130,7 @@ void hrr_ij(double *g, double *rjri, int count, int g_size)
     }
 }
 template <int LK, int LL>
-__device__ __forceinline__
+__device__ inline
 void hrr_kl(double *g, double *rlrk, int stride_k)
 {
     SETUP_GOUT_KERNEL();
@@ -157,7 +157,7 @@ void hrr_kl(double *g, double *rlrk, int stride_k)
 }
 
 template <int I, int J, int K, int L>
-__device__ __forceinline__
+__device__ inline
 void inner_dot(double *gout, double *g,
                int *addr_i, int *addr_j,
                int *addr_k, int *addr_l)
@@ -187,7 +187,7 @@ void inner_dot(double *gout, double *g,
     } } } }
 }
 
-__device__ __forceinline__
+__device__ inline
 void load_dm(double *dm, double *dm_cache, int nao, int i0, int j0,
              int ioff, int joff, int nfi, int nfj)
 {
@@ -206,7 +206,7 @@ void load_dm(double *dm, double *dm_cache, int nao, int i0, int j0,
 }
 
 template <int I, int J, int K, int L>
-__device__ __forceinline__
+__device__ inline
 void dot_dm(double *vk, double *dm_cache, double *gout, int nao, int i0, int l0,
             int ioff, int loff, int nfi, int nfl)
 {

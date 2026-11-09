@@ -175,8 +175,8 @@ void build_jk_2c2e_kernel(
 }
 
 
-__device__ __forceinline__ void add_sJK(int m, int n, int l, int s, double val, 
-                                        const double* s_P, double* s_J, double* s_K) {
+__device__ inline void add_sJK(int m, int n, int l, int s, double val, 
+                               const double* s_P, double* s_J, double* s_K) {
     atomicAdd(&s_J[m * 9 + n], val * s_P[l * 9 + s]);
     atomicAdd(&s_K[m * 9 + l], val * s_P[n * 9 + s]);
 }

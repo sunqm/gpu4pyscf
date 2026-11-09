@@ -32,7 +32,7 @@
     int grid_id = global_x; \
     int bas_id = blockIdx_y;
 
-template <int ANG> __device__ __forceinline__
+template <int ANG> __device__ inline
 void _cart_gto_ip2(double gto[], double gx[], double gy[], double gz[],
                    double a2, double rx, double ry, double rz)
 {
@@ -72,7 +72,7 @@ void _cart_gto_ip2(double gto[], double gx[], double gy[], double gz[],
     }
 }
 
-template <int ANG> __device__ __forceinline__
+template <int ANG> __device__ inline
 void _cart_deriv1_strain_tensor(
         double ao[], double gx[], double gy[], double gz[],
         double a2, double rx, double ry, double rz,

@@ -87,7 +87,7 @@ static void rys_roots(int nroots, double x, double *rw,
 }
 
 // rys_roots for range-separation Coulomb
-__device__ __forceinline__
+__device__ inline
 void rys_roots_rs(int nroots, double theta, double rr, double omega,
                   double *rw, int block_size, int rt_id, int stride)
 {

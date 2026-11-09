@@ -31,7 +31,7 @@
 #define IJ_WIDTH        36
 #define DM_BATCH_SIZE   4
 
-template <int NF, int N_DM> __device__ __forceinline__
+template <int NF, int N_DM> __device__ inline
 void _dot_dm(double *vj_xyz, double *gout, double *dm, int n_dm, size_t nao2)
 {
 #pragma unroll
@@ -45,7 +45,7 @@ void _dot_dm(double *vj_xyz, double *gout, double *dm, int n_dm, size_t nao2)
     }
 }
 
-template <int NF, int N_DM> __device__ __forceinline__
+template <int NF, int N_DM> __device__ inline
 void _store_vj_aux(double *out, double *vj_xyz, int n_dm, int naux)
 {
 #pragma unroll
@@ -58,7 +58,7 @@ void _store_vj_aux(double *out, double *vj_xyz, int n_dm, int naux)
     }
 }
 
-template <int NF_IJ, int N_DM> __device__ __forceinline__
+template <int NF_IJ, int N_DM> __device__ inline
 void _dot_aux(double *vj, double *gx, double *vj_aux,
               int *idx_i, int *idx_j, int *idx_k, int li, int lj, int lk,
               int gout_stride, int gout_id)
@@ -90,7 +90,7 @@ void _dot_aux(double *vj, double *gx, double *vj_aux,
     }
 }
 
-template <int NF_IJ, int N_DM> __device__ __forceinline__
+template <int NF_IJ, int N_DM> __device__ inline
 void _store_vj(double *out, double *vj_cache, int li, int lj, size_t nao,
                int gout_stride, int gout_id)
 {
