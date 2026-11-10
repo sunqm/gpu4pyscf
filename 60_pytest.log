@@ -1,0 +1,66 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.8, pytest-9.2.0, pluggy-1.7.0
+rootdir: /home/runner/work/gpu4pyscf/gpu4pyscf
+configfile: pytest.toml
+plugins: xdist-3.8.0, timeout-2.4.0, cov-7.1.0
+created: 4/4 workers
+4 workers [218 items]
+
+.FFatal Python error: Segmentation fault
+
+Thread 0x00007ff5977ff6c0 (most recent call first):
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 534 in read
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 567 in from_io
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 1160 in _thread_receiver
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 341 in run
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 411 in _perform_spawn
+
+Current thread 0x00007ff5988fc740 (most recent call first):
+  File "/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/scf/jk.py", line 558 in proc
+  File "/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/lib/multi_gpu.py", line 37 in run
+  File "/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/scf/jk.py", line 607 in get_jk
+  File "/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/scf/jk.py", line 128 in get_jk
+  File "/home/runner/work/gpu4pyscf/gpu4pyscf/gpu4pyscf/scf/tests/test_scf_jk.py", line 101 in test_jk_hermi1_cart
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/python.py", line 187 in pytest_pyfunc_call
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_execution.py", line 147 in _multicall
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_manager.py", line 183 in _hookexec
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_caller.py", line 197 in __call__
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/python.py", line 1798 in runtest
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/runner.py", line 184 in pytest_runtest_call
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_execution.py", line 147 in _multicall
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_manager.py", line 183 in _hookexec
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_caller.py", line 197 in __call__
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/runner.py", line 250 in <lambda>
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/runner.py", line 361 in from_call
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/runner.py", line 249 in call_and_report
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/runner.py", line 139 in runtestprotocol
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/runner.py", line 118 in pytest_runtest_protocol
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_execution.py", line 147 in _multicall
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_manager.py", line 183 in _hookexec
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_caller.py", line 197 in __call__
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/xdist/remote.py", line 227 in run_one_test
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/xdist/remote.py", line 206 in pytest_runtestloop
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_execution.py", line 147 in _multicall
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_manager.py", line 183 in _hookexec
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_caller.py", line 197 in __call__
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/main.py", line 387 in _main
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/main.py", line 333 in wrap_session
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/_pytest/main.py", line 380 in pytest_cmdline_main
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_execution.py", line 147 in _multicall
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_manager.py", line 183 in _hookexec
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/pluggy/_caller.py", line 197 in __call__
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/xdist/remote.py", line 427 in <module>
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 1291 in executetask
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 341 in run
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 411 in _perform_spawn
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 389 in integrate_as_primary_thread
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 1273 in serve
+  File "/home/runner/micromamba/envs/sycl-ci/lib/python3.12/site-packages/execnet/gateway_base.py", line 1806 in serve
+  File "<string>", line 8 in <module>
+  File "<string>", line 1 in <module>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, _cyutility, scipy._cyutility, scipy._lib._ccallback_c, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._pcg64, numpy.random._generator, numpy.random._mt19937, numpy.random._philox, numpy.random._sfc64, numpy.random.mtrand, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._batched_linalg, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_schur_sqrtm, scipy.linalg._matfuncs_expm, scipy.linalg.cython_blas, scipy.linalg._decomp_update, dpctl._sycl_context, dpctl._sycl_platform, dpctl._sycl_device, dpctl._sycl_device_factory, dpctl._sycl_event, dpctl.compiler._compiler, dpctl._sycl_queue_manager, dpctl.memory._memory, dpctl._sycl_queue, dpnp.tensor._compute_follows_data, dpnp.tensor._dlpack, dpnp.tensor._stride_utils, dpnp.tensor._slicing, dpnp.tensor._types, dpnp.tensor._flags, dpnp.tensor._usmarray, dpnp.dpnp_algo.dpnp_algo, dpnp.dpnp_utils.dpnp_algo_utils, dpnp.random.dpnp_algo_random, h5py._errors, h5py.defs, h5py._objects, h5py.h5, h5py.utils, h5py.h5t, h5py.h5s, h5py.h5ac, h5py.h5p, h5py.h5r, h5py._npystrings, h5py._proxy, h5py._conv, h5py.h5z, h5py.h5a, h5py.h5d, h5py.h5ds, h5py.h5g, h5py.h5i, h5py.h5o, h5py.h5f, h5py.h5fd, h5py.h5pl, h5py.h5l, h5py._selector, scipy.special._ufuncs_cxx, scipy.special._ellip_harm_2, scipy.special._special_ufuncs, scipy.special._gufuncs, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpacklib, scipy.sparse.linalg._propack, scipy.optimize._group_columns, scipy._lib.messagestream, scipy.optimize._trlib._trlib, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._slsqplib, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy._lib._uarray._uarray, scipy.linalg._decomp_interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.spatial._ckdtree, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._hausdorff, scipy.spatial._distance_wrap, scipy.spatial.transform._rotation_cy, scipy.spatial.transform._rigid_transform_cy, scipy.optimize._direct (total: 104)
+[gw0] node down: Not properly terminated
+F
+replacing crashed worker gw0
+......
